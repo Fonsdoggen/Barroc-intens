@@ -1,0 +1,113 @@
+
+MUST HAVES
+Legenda: 
+* Sprint 1 
+* Sprint 2 
+* Sprint 3 
+* Sprint 4
+* Web Only: “Nice to have”/could-have voor Native studenten
+* Native Only: “Nice to have”/could-have voor Web studenten
+
+De applicatie moet de onderstaande mogelijkheden bevatten. Voor het gemak zijn de functionaliteiten in 6 categorieën verdeeld. De volgende actoren relevant voor deze opdracht:
+* Opdrachtgever: Barroc Intens als organisatie
+* [afdeling] Medewerker: medewerker van Barroc Intens, eventueel van een specifieke afdeling.
+* Klant: klant van Barroc Intens
+* Gebruiker: klant van Barroc Intens of medewerker van Barroc Intens
+
+Onder ieder bulletpoint staan eventuele acceptatiecriteria beschreven.
+ 
+
+
+BARROC INTENS WEBSITE ALGEMEEN (WEB ONLY)
+* Als klant wil ik een duidelijke landingspagina met de belangrijkste linkjes makkelijk te bereiken, zodat ik vlot kan navigeren naar voor mij relevante plaatsen
+o Pakkende Landingspagina losjes geïnspireerd op de site: https://www.moccador.nl/machines/horeca
+* Als klant wil ik alle producten kunnen bekijken, zodat ik een idee krijg wat Barroc Intens mij kan bieden.
+o Er worden geen prijzen benoemd op de prijs. Daarvoor moet een klant contact opnemen via de ‘offerte aanvragen’ functionaliteit.
+* Als klant wil ik snel een offerte kunnen aanvragen wanneer ik naar een product kijk. Zo kan ik snel in contact komen over een product wat me interessant lijkt.
+o Bij iedere pagina dient een ‘offerte aanvragen’ knop getoond te worden.
+* Als opdrachtgever willen we dat gebruikers een contactformulier invullen wanneer zij een offerte aanvragen. Doordat de klant basisgegevens invult weten wij waar we de klant kunnen bereiken.
+* Als opdrachtgever willen we een duidelijke cookie-melding en privacyverklaring, zodat we voldoen aan toepasbare privacywetgevingen.
+o De gebruiker moet actief akkoord geven op het gebruik van cookies.
+o Er moet in de cookiemelding een verwijzing zijn naar de privacyverklaring
+
+BARROC INTENS ALGEMEEN
+* Als opdrachtgever willen we dat de applicatie een minimalistisch design heeft, zodat de applicatie overeenkomt met onze andere uitingen.
+o De Barroc Intens branding is hoofdzakelijk wit/zwart met enkele highlights van Barroc Intens geel (#FDD716)
+* Als gebruiker wil ik kunnen inloggen, zodat ik enkel de voor mij relevante functionaliteiten kan bereiken.
+o Ingelogde medewerkers vallen onder een van deze afdelingen: Finance, Sales, Inkoop, Maintenance
+o Klanten moeten ook kunnen inloggen, die vallen uiteraard niet onder een afdeling
+* Als gebruiker wil ik nadat ik inlog een apart ‘dashboard’ te zien krijg, wat de alleen voor mij interessante functionaliteiten toont. Zo raak ik niet in de war over mijn verantwoordelijkheden
+o Iedere rol krijgt een apart dashboard te zien
+ 
+FINANCE
+* Als financieel medewerker wil ik makkelijk een factuur kunnen opstellen voor de aansluitkosten van een koffiezetapparaat. Zo voorkom ik dat iedere factuur er anders uitziet en dat ik mogelijk rekenfouten maak.
+* Als financieel medewerker wil ik leasecontracten van klanten kunnen beheren. Zo kan ik goed bijhouden wat voor betalingen we van onze klanten kunnen verwachten.
+o Leasecontracten moeten aangemaakt, bewerkt en verwijdert kunnen worden.
+o Het aanmaken van contracten moet op 2 manieren kunnen: met maandelijkse of periodieke facturen.
+o Er moet een overzichtpagina van alle leasecontracten komen.
+o Facturen moeten:
+* automatisch aangemaakt kunnen worden
+* automatisch verzonden kunnen worden
+* ingezien kunnen worden
+* op betaald gezet kunnen worden
+* de status tonen (betaald of niet)
+* de maandelijkse en jaarlijkse overzichten inzichtelijk maken van de totale in- en uitgaven.
+o Voor het opstellen van een leasecontract moet een bkr-check gedaan worden. Doormiddel van een vinkje kan worden aangegeven of die check is voldaan en of het bedrijf de toetsing is doorgekomen.
+
+SALES
+* Als sales medewerker wil ik offertes kunnen maken op een tablet. Zo kan ik terplekke bij een klant een offerte samenstelen en laten zien.
+o Dit proces moet goed werken op een 8-inch tablet.
+* Als sales medewerker wil ik offertes makkelijk kunnen mailen naar de klant. Zo kan ik een gemaakte offerte laten zien en voor de ogen van de klant met ze delen.
+o Native: Mailen moet via de standaard gekozen app op het systeem gebeuren. De offerte moet direct als ‘attachment’ gekoppeld zijn.
+* Als sales medewerker wil ik in een gesprek met de klant makkelijk aantekeningen/opmerkingen en afspraken kunnen vastleggen. Zo geven we de klant het vertrouwen dat hun wensen vastgelegd worden.
+* Als sales medewerker wil ik een klant kunnen aanmaken in het systeem. Zo kan de klant de status van onze overeenkomsten volgen.
+o De klant dient een automatische mail te krijgen waarin zij de inloggegevens registeren. Dit mag ook een soort “password-reset” link zijn, zodat de klant een eigen wachtwoord kan kiezen.
+
+INKOOP
+* Als inkoop medewerker wil ik makkelijk producten kunnen beheren in onze systemen. Zo weet ik dat al mijn collega’s werken met de juiste productgegevens.
+o Producten moeten aangemaakt kunnen worden, bewerkt en verwijdert.
+o Producten mogen niet zomaar verwijderd worden als ze al besteld zijn.
+o Sommige producten zijn enkel inzichtelijk voor medewerkers. Zo kunnen technische onderdelen door de Maintenance afdeling gezien worden, maar zien klanten enkel gehele koffiezetapparaten.
+* Als inkoop medewerker wil ik de voorraad kunnen bijhouden van onze producten. Zo weet ik wanneer ik producten moet bijbestellen om de voorraad aan te vullen.
+o Het moet mogelijk zijn om per product een hoeveelheid bij te houden.
+o Wanneer een inkoop medewerker nieuwe voorraad besteld, moet dit inzichtelijk zijn bij het product.
+* Als Barroc Intens wil ik dat inkoop medewerkers voor het inkopen van meer dan 5000 producten akkoord moeten krijgen van hun leidinggevende. Zo weten we als organisatie welke grote uitgaven gedaan worden.
+* Als gebruiker wil ik bij overzichten van producten kunnen filteren op voorraadstatus. Zo weet ik als klant en medewerker welke producten er leverbaar zijn.
+o De mogelijke statussen zijn: Momenteel leverbaar en Uit voorraad
+* Als gebruiker wil ik bij overzichten van producten kunnen zoeken. Zo kan ik een product van een bepaald merk, of met een bepaalde beschrijving vinden.
+* Als inkoop medewerker wil ik een melding krijgen wanneer een collega van de afdeling Maintenance een product gebruikt. Zo kan ik op tijd nieuwe onderdelen bijbestellen.
+
+MAINTENANCE
+* Als hoofdmedewerker van de afdeling maintenance wil ik ingekomen storingsaanvragen kunnen bekijken. Zo zie ik wat de medewerkers van mijn afdeling nog moeten afhandelen. (Seeder)
+* Als hoofdmedewerker van de afdeling maintenance wil ik bezoeken voor storingsaanvragen kunnen inplannen in onze kalender. Zo weten de medewerkers van mijn afdeling waar en wanneer ze bij klanten langs moeten. Daarnaast houd ik het overzicht over storingsaanvragen die ik nog moet afhandelen.
+o Naast storingsaanvragen moeten er ook routinematige bezoeken ingepland kunnen worden.
+o Medewerkers van de afdeling maintenance moeten aan deze storingsaanvragen gekoppeld kunnen worden.
+* Als hoofdmedewerker van de afdeling maintenance wil ik alle ingevulde werkbonnen van mijn afdeling ontvangen. Zo kan ik in de gaten houden hoe storingen worden opgelost en hoeveel materiaal daarbij gebruikt wordt.
+* Als medewerker van de afdeling maintenance wil ik in een kalenderoverzicht per dag én per week kunnen zien welke werkbezoeken ik heb. Zo heb ik dagelijks een overzicht van storingsaanvragen die ik moet afhandelen en andere bezoeken die ik heb. Ook kan ik inzien waar ik in een week naartoe moet.
+o Medewerkers/monteurs krijgen voor het uitvoeren van hun functie een 8-inch tablet. Daar moet de applicatie goed op werken.
+* Als medewerker van de afdeling maintenance wil ik snel van een gepland werkbezoek kunnen zien wat de details zijn.
+o In de kalender moet de medewerker op een bezoek kunnen klikken. Dan krijgt deze een detailscherm te zien van het werkbezoek.
+o Dit moet goed werken op de tablet van de medewerker.
+* Als medewerker van de afdeling maintenance wil ik een werkbon kunnen invullen voor mijn werkbezoeken. Zo kan ik vastleggen hoe ik problemen verhelp en welke materialen ik gebruik.
+o De werkboninformatie moet opgeslagen worden in de database.
+o De werkbon moet worden gemaild naar het hoofd van de afdeling maintenance.
+
+KLANT
+* Als klant wil ik op een makkelijke manier toegang krijgen tot mijn account. Zo kan ik na mijn aanmelding door de sales afdeling snel bij de status van mijn bestelling(en).
+o De sales afdeling maakt de account voor de gebruiker.
+o De klant moet zelf een wachtwoord kiezen (de sales medewerker mag dit wachtwoord niet weten)
+* Als klant wil ik makkelijk mijn factuurgegevens kunnen inzien. Zo houd ik overzicht over mijn betalingen aan Barroc Intens.
+* Als klant wil ik snel mijn leasecontract kunnen bekijken. Zo weet ik welke afspraken ik met Barroc Intens heb gemaakt.
+* Als klant wil ik op een logische manier kunnen inzien welke persoonsgegevens Barroc Intens over mij heeft. Ik wil die gegevens makkelijk kunnen aanpassen. Zo kan ik mijn rechten uitoefenen op het gebied van privacy.
+o Het zou mooi zijn als de klant een verwijderingsverzoek kan aanvragen. Als het niet lukt dit automatisch te maken, moet het in ieder geval duidelijk zijn dat de klant het verzoek ook kan mailen naar privacy@barroc.it
+* Als klant wil ik op een makkelijke manier een storingsaanvraag kunnen doen over een of meer van de apparaten die ik lease.
+
+EN VERDER…
+Dit is een flinke lijst met eisen die volgens allemaal ‘must-haves’ (MoSCoW) zijn. 
+Mogelijk haal je nog meer informatie uit het interview. Stel goede ideeën voor aan de opdrachtgever en bedenk je vooral ook of je informatie mist. Bekijk met de opdrachtgever tijdens het interview wat nog meer ‘should-haves’ en ‘wont-haves’ zijn. Alle overige eisen die je zelf benoemt, maar waar de opdrachtgever niet positief op reageert zijn ‘could-haves’. Die kun je eventueel uitvoeren als er veel tijd over is.
+Zorg dat zowel jij als de opdrachtgever het vertrouwen hebt dat je de opdracht begrijpt.
+
+Product Backlog
+
+Documentversie: 2.0
+
