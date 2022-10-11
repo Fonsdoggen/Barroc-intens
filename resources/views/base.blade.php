@@ -19,13 +19,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('testroute')}}">Testroute</a>
+                        
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('testroute2')}}">Testroute2</a>
+
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('events')}}">Upcoming Events</a>
+
                     </li>
                     @auth
                         <li class="nav-item">
