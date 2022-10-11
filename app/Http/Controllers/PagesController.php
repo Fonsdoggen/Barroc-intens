@@ -9,4 +9,8 @@ class PagesController extends Controller
     public function home() {
         return view('home');
     }
+
+    public function offerte() {
+        return view('pages/offerte');
+    }
 }
