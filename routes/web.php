@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use \App\Http\Controllers\PagesController;
+use App\Http\Controllers\PagesController;
+use App\Http\Controllers\OfferteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,9 +21,7 @@ Route::get('/', function () {
 
 Route::get('/home', [PagesController::class, 'home']);
 
-Route::get('/offerte', function () {
-    return view('pages/offerte');
-});
+Route::resource('offertes',OfferteController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
