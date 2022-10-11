@@ -13,7 +13,7 @@ class OfferteController extends Controller
      */
     public function index()
     {
-        return view('pages/offerte');
+
     }
 
     /**
@@ -23,7 +23,7 @@ class OfferteController extends Controller
      */
     public function create()
     {
-        //
+        return view('offerte/offerte');
     }
 
     /**
