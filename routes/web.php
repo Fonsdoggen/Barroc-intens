@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use \App\Models\Product;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\OfferteController;
+use App\Http\Controllers\ProductsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,11 +17,9 @@ use App\Http\Controllers\OfferteController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PagesController::class, 'home']);
 
-Route::get('/home', [PagesController::class, 'home']);
+Route::resource('products', ProductsController::Class);
 
 Route::resource('offerte',OfferteController::class);
 

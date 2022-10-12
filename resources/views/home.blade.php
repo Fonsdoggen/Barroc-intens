@@ -3,19 +3,15 @@
 @section('content')
 
     <h1>Products</h1>
+    @foreach( $products as $product )
     <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="{{asset('img/machine-bit-deluxe.png')}}" alt="Card image cap">
+        <img class="card-img-top" src="{{asset('img/machine-bit-deluxe.png')}}" alt="this shit aint working 😍">
         <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
+          <h5 class="card-title">{{ $product->name }}</h5>
+          <p class="card-text">{{ $product->description }}</p>
+          <a href="{{route('products.show', $product)}}" class="btn btn-primary">Meer informatie -></a>
         </div>
-        <a href="#" class="btn btn-primary" style="width: 60%;">Offerte aanvragen</a>
-    </div>
-
-<div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="{{asset('img/machine-bit-deluxe.png')}}" alt="Machine Bit Light">
-    <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    </div>
+      </div>
+    @endforeach
 
 @endsection
