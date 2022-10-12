@@ -13,7 +13,7 @@ class OfferteController extends Controller
      */
     public function index()
     {
-
+        return view('home');
     }
 
     /**
@@ -34,7 +34,6 @@ class OfferteController extends Controller
      */
     public function store(Request $request)
     {
-        //
     }
 
     /**

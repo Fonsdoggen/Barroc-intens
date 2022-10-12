@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 Route::get('/home', [PagesController::class, 'home']);
 
-Route::resource('offertes',OfferteController::class);
+Route::resource('offerte',OfferteController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
