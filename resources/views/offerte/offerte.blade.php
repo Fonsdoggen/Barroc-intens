@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>Offerte aanmaken</h1>
-    <form action="" method="post">
+    <form action="{{route('offerte.store')}}" method="post">
         @csrf
         <div class="mb-3">
             <label class="form-label">Email address</label>
