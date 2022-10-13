@@ -38,7 +38,7 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        Item::create($request->except('_token'));
+        Product::create($request->except('_token'));
         return redirect()
         ->route('products.index');
     }
