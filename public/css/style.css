@@ -1,0 +1,59 @@
+/* home */
+
+.home-intro{
+    background-image: url("../img/Coffee-background2.avif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home-intro-item{
+    background: rgba(0,0,0,0.5);
+    min-height: 835px;
+    padding-bottom: 40px;
+}
+
+.flex-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 210px;
+}
+
+.flex-wrapper h2{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.flex-wrapper-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-top: 60px;
+    flex-direction: column;
+}
+
+.flex-wrapper-text p{
+    width: 550px;
+}
+
+.home-intro-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.home-intro-button button{
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 9px;
+    padding-bottom: 8px;
+    border-radius: 100px;
+    font-size: large;
+}
+
+.card-body{
+    color: black;
+}
+
