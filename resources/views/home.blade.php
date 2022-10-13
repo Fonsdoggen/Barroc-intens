@@ -16,10 +16,12 @@
         </div>
     </div>
 
-    <div class="container" id="down"
-        <h1 style="color: white">Products</h1>
+    <div class="container">
+        <h1 style="color: black; display: flex; justify-content: flex-start">Products</h1>
+    </div>
+    <div class="container" id="down" style="display: flex; justify-content: flex-start">
         @foreach( $products as $product )
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 18rem; margin-right: 60px;">
             <img class="card-img-top" src="{{asset('img/machine-bit-deluxe.png')}}" alt="Afbeelding van product">
             <div class="card-body">
               <h5 class="card-title">{{ $product->name }}</h5>
@@ -28,7 +30,10 @@
             </div>
           </div>
         @endforeach
+    </div>
+    <div class="container">
         <a href="{{route('products.create')}}" class="btn btn-success">Product Toevoegen</a>
+    </div>
 
 {{--<div class="card" style="width: 18rem;">
         <img class="card-img-top" src="{{asset('img/machine-bit-light.png')}}" alt="Machine Bit Light">

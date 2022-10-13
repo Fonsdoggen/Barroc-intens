@@ -5,27 +5,27 @@
         <form method="post" action="{{route('products.store')}}">
             @csrf
             <div class="form-group">
-              <label for="">Productnaam</label>  
+              <label for="">Productnaam:</label>
               <input type="text" name="name" class="form-control">
             </div>
 
             <div class="form-group">
-              <label for="">Beschrijving</label>  
+              <label style="margin-top: 24px" for="">Beschrijving:</label>
               <textarea name="description" class="form-control" id="" cols="30" rows="10"></textarea>
             </div>
 
             <div class="form-group">
-              <label for="">Afbeelding</label>  
+              <label style="margin-top: 24px" for="">Afbeelding:</label>
               <input type="file" name="image_path" class="form-control">
             </div>
 
             <div class="form-group">
-              <label for="">Prijs</label>  
+              <label style="margin-top: 24px" for="">Prijs:</label>
               <input type="number" name="price" class="form-control">
             </div>
 
             <div class="form-group">
-              <label style="margin-top: 24px" for="product_category_id" class="form-control">Categorie:</label>
+              <label style="margin-top: 24px" for="product_category_id">Categorie:</label>
               <div class="col-sm-10">
                   <select class="form-select" name="product_category_id" id="product_category_id">
                       <option selected value="0">Kies...</option>
@@ -35,7 +35,7 @@
               </div>
           </div>
 
-            <input type="submit" value="Product opslaan" class="btn btn-dark">
+            <input type="submit" style="margin-top: 24px" value="Product opslaan" class="btn btn-dark">
 
         </form>
 @endsection
