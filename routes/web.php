@@ -5,7 +5,7 @@ use \App\Models\Product;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\OfferteController;
 use App\Http\Controllers\ProductsController;
-
+use App\Http\Controllers\CompanyController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +18,8 @@ use App\Http\Controllers\ProductsController;
 */
 
 Route::get('/', [PagesController::class, 'home']);
+
+Route::resource('companies', CompanyController::class);
 
 Route::resource('products', ProductsController::Class);
 

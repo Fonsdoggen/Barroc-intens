@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\ProductInvoices;
-use App\Models\Product;
+use App\Models\Companies;
 
-class OfferteController extends Controller
+class CompanyController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +14,9 @@ class OfferteController extends Controller
      */
     public function index()
     {
-        $products = Product::orderBy('price')->get();
-        return view('home', [
-            'products' => $products
+        $companies = Companies::all();
+        return view('companies/index', [
+            'companies' => $companies
         ]);
     }
 
@@ -28,7 +27,7 @@ class OfferteController extends Controller
      */
     public function create()
     {
-        return view('offerte/create');
+        //
     }
 
     /**
@@ -39,8 +38,7 @@ class OfferteController extends Controller
      */
     public function store(Request $request)
     {
-        ProductInvoices::create($request->except('_token'));
-        return redirect()->route('home');
+        //
     }
 
     /**
