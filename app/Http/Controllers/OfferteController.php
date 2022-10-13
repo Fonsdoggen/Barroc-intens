@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\ProductInvoices;
+use App\Models\Product;
 
 class OfferteController extends Controller
 {
@@ -13,7 +15,10 @@ class OfferteController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $products = Product::orderBy('price')->get();
+        return view('home', [
+            'products' => $products
+        ]);
     }
 
     /**
@@ -23,7 +28,7 @@ class OfferteController extends Controller
      */
     public function create()
     {
-        return view('offerte/offerte');
+        return view('offerte/create');
     }
 
     /**
@@ -34,6 +39,8 @@ class OfferteController extends Controller
      */
     public function store(Request $request)
     {
+        ProductInvoices::create($request->except('_token'));
+        return redirect()->route('home');
     }
 
     /**
