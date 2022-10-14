@@ -82,6 +82,7 @@ class CompanyController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Companies::destroy($id);
+        return redirect()->route('companies.index')->with('message', 'Deleted');
     }
 }

@@ -20,11 +20,15 @@
                         @foreach($companies as $company)
                         <tr>
                             <td>{{$company->name}}</td>
-
                         </tr>
+                            <form action="{{route('companies.destroy', $company->id)}}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <input type="submit" value="Delete" class="btn btn-danger">
+                            </form>
                         @endforeach
-                        <a href="{{route("companies.create")}}" class="btn btn-primary">Create it Bozo</a>
                     </table>
+                    <a href="{{route("companies.create")}}" style="margin-top: 10px;" class="btn btn-primary">Add company</a>
                 </div>
             </div>
         </div>
