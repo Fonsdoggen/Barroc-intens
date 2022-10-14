@@ -31,7 +31,7 @@
           </div>
         @endforeach
     </div>
-    <div class="container">
+    <div class="container div-spacing">
         <a href="{{route('products.create')}}" class="btn btn-success">Product Toevoegen</a>
     </div>
 

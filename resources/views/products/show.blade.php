@@ -14,5 +14,7 @@
 <h3>{{$product->price}}</h3>
 <br>
 <a href="{{route('products.index')}}" class="btn btn-dark"><- Terug</a>
+<a href="{{route('offerte.create')}}" class="btn btn-success">Product Toevoegen</a>
+
 
 @endsection
