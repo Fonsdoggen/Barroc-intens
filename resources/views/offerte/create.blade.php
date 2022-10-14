@@ -5,8 +5,8 @@
     <form action="{{route('offerte.store')}}" method="post">
         @csrf
         <div class="mb-3">
-            <label class="form-label">Amount:</label>
-            <input type="number" name="amount" class="form-control">
+            <label class="form-label">Datum:</label>
+            <input type="date" name="date" class="form-control">
         </div>
         <div class="mb-3">
             <label class="form-label">Price per product:</label>

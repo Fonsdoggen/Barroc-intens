@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\ProductInvoices;
+use App\Models\Invoices;
 use App\Models\Product;
 
 class OfferteController extends Controller
@@ -39,7 +39,7 @@ class OfferteController extends Controller
      */
     public function store(Request $request)
     {
-        ProductInvoices::create($request->except('_token'));
+        Invoices::create($request->except('_token'));
         return redirect()->route('home');
     }
 
