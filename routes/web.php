@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use \App\Models\Product;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\OfferteController;
 use App\Http\Controllers\ProductsController;
@@ -19,7 +18,9 @@ use App\Http\Controllers\CompanyController;
 
 Route::get('/', [PagesController::class, 'home']);
 
-Route::resource('companies', CompanyController::class);
+Route::get('/company', [CompanyController::class, 'index'])->middleware(['auth']);
+
+Route::resource('companies', CompanyController::class)->middleware(['auth']);
 
 Route::resource('products', ProductsController::Class);
 

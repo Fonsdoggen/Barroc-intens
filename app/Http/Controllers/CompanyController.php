@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Companies;
+use Illuminate\Http\Request;
 
 class CompanyController extends Controller
 {
@@ -15,9 +15,7 @@ class CompanyController extends Controller
     public function index()
     {
         $companies = Companies::all();
-        return view('companies/index', [
-            'companies' => $companies
-        ]);
+        return view('/company', ['companies' => $companies]);
     }
 
     /**
@@ -27,7 +25,7 @@ class CompanyController extends Controller
      */
     public function create()
     {
-        //
+        return view('companies.create');
     }
 
     /**
@@ -38,7 +36,8 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Companies::create($request->except('_token', '_contract_id'));
+        return redirect()->route('companies.index')->with('message', 'You added a company');
     }
 
     /**

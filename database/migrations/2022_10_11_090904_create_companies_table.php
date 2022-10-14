@@ -21,8 +21,8 @@ return new class extends Migration
             $table->string('house_number');
             $table->string('city');
             $table->string('country_code');
-            $table->dateTime('bkr_checked_at');
-            $table->integer('contract_id');
+            $table->dateTime('bkr_checked_at')->nullable();
+            $table->integer('contract_id')->nullable();
             $table->timestamps();
         });
     }

@@ -1,23 +1,24 @@
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
-                <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-10 w-auto fill-current text-gray-600" />
-                    </a>
-                </div>
+{{--                <div class="shrink-0 flex items-center">--}}
+{{--                    <a href="{{ route('dashboard') }}">--}}
+{{--                        <x-application-logo class="block h-10 w-auto fill-current text-gray-600" />--}}
+{{--                    </a>--}}
+{{--                </div>--}}
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-{{--                    <x-nav-link :href="route('companies.index')" :active="request()->routeIs('companies.index')">--}}
-                        {{ __('companies toevoegen') }}
-{{--                    </x-nav-link>--}}
+                    <x-nav-link :href="route('companies.index')" :active="request()->routeIs('companies.index')">
+                        {{ __('Companies toevoegen') }}
+                    </x-nav-link>
                 </div>
             </div>
 
