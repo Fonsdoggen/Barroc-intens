@@ -17,7 +17,7 @@
     </div>
 
     <div class="container">
-        <h1 style="color: black; display: flex; justify-content: flex-start">Products</h1>
+        <h1 style="color: black; display: flex; justify-content: flex-start">Producten</h1>
     </div>
     <div class="container" id="down" style="display: flex; justify-content: flex-start">
         @foreach( $products as $product )

@@ -14,7 +14,13 @@
 <h3>{{$product->price}}</h3>
 <br>
 <a href="{{route('products.index')}}" class="btn btn-dark"><- Terug</a>
-<a href="{{route('offerte.create')}}" class="btn btn-success">Product Toevoegen</a>
+<a href="{{route('products.edit', $product)}}" class="btn btn-dark">Edit</a>
+<form method="POST" action="{{route('products.destroy', $product)}}">
+    @csrf
+    @method('delete')
+    <input class="btn btn-danger" type="submit" value="Delete">
+</form>
+<a href="{{route('offerte.create')}}" class="btn btn-success">Offerte aanmaken</a>
 
 
 @endsection
