@@ -87,8 +87,7 @@
                         <i class="fas fa-gem me-3"></i>Barroc-intens
                     </h6>
                     <p>
-                        Here you can use rows and columns to organize your footer content. Lorem ipsum
-                        dolor sit amet, consectetur adipisicing elit.
+                       professionele koffie en machines sinds 1999
                     </p>
                 </div>
                 <!-- Grid column -->
