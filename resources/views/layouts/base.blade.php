@@ -87,8 +87,7 @@
                         <i class="fas fa-gem me-3"></i>Barroc-intens
                     </h6>
                     <p>
-                        Here you can use rows and columns to organize your footer content. Lorem ipsum
-                        dolor sit amet, consectetur adipisicing elit.
+                       professionele koffie en machines sinds 1999
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -100,16 +99,16 @@
                         Products
                     </h6>
                     <p>
-                        <a href="#!" class="text-reset">Angular</a>
+                        <a href="#!" class="text-reset">Repairs</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">React</a>
+                        <a href="#!" class="text-reset">Machines</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Vue</a>
+                        <a href="#!" class="text-reset">Contracts</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Laravel</a>
+                        <a href="#!" class="text-reset">Beans</a>
                     </p>
                 </div>
                 <!-- Grid column -->
