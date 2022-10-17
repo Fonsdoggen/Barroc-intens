@@ -9,8 +9,8 @@
             <input type="date" name="date" class="form-control">
         </div>
         <div class="mb-3">
-            <label class="form-label">Prijs per product:</label>
-            <input type="number" name="price_per_product" class="form-control">
+            <label class="form-label">Betaald op:</label>
+            <input type="date" name="paid_at" class="form-control">
         </div>
         <div class="form-group">
             <input class="mt-4 btn btn-primary" type="submit" value="Opslaan">

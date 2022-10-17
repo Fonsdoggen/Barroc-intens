@@ -20,7 +20,7 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     <x-nav-link :href="route('companies.index')" :active="request()->routeIs('companies.index')">
-                        {{ __('Companies toevoegen') }}
+                        {{ __('Bedrijven toevoegen') }}
                     </x-nav-link>
                 </div>
             </div>
