@@ -16,32 +16,29 @@
         </div>
     </div>
 
-    <div class="container">
-        <h1 style="color: black; display: flex; justify-content: flex-start">Producten</h1>
-    </div>
-    <div class="container" id="down" style="display: flex; justify-content: flex-start">
-        @foreach( $products as $product )
-        <div class="card" style="width: 18rem; margin-right: 60px;">
-            <img class="card-img-top" src="{{asset('img/machine-bit-deluxe.png')}}" alt="Afbeelding van product">
-            <div class="card-body">
-              <h5 class="card-title">{{ $product->name }}</h5>
-              <p class="card-text">{{ $product->description }}</p>
-              <a href="{{route('products.show', $product)}}" class="btn btn-dark">Meer informatie -></a>
-            </div>
-          </div>
-        @endforeach
-    </div>
-    <div class="container div-spacing">
-        @auth
-        <a href="{{route('products.create')}}" class="btn btn-success">Product Toevoegen</a>
-        @endauth
-    </div>
-
-{{--<div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="{{asset('img/machine-bit-light.png')}}" alt="Machine Bit Light">
-        <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <div class="home">
+        <div class="container">
+            <h1 id="down" style="color: white; display: flex; justify-content: flex-start; padding-top: 20px">Producten</h1>
         </div>
-    </div>--}}
+        <div class="container" style="display: flex; justify-content: flex-start">
+            @foreach( $products as $product )
+            <div class="card home-card" style="width: 18rem; margin-right: 60px; border-radius: 20px;">
+                <img class="card-img-top" src="{{asset('img/machine-bit-deluxe.png')}}" alt="Afbeelding van product">
+                <div class="card-body">
+                  <h5 class="card-title">{{ $product->name }}</h5>
+                  <p class="card-text">{{ $product->description }}</p>
+                    <div class="home-main-button">
+                        <button type="button" class="btn btn-warning" href="{{route('products.show', $product)}}">Meer informatie -></button>
+                    </div>
+                </div>
+              </div>
+            @endforeach
+        </div>
 
+        <div class="container div-spacing" style="padding-bottom: 30px;">
+            @auth
+            <a href="{{route('products.create')}}" class="btn btn-success">Product Toevoegen</a>
+            @endauth
+        </div>
+        
 @endsection

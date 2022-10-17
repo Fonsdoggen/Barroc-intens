@@ -1,5 +1,10 @@
 /* home */
 
+main .home{
+    background: rgb(25,25,25);
+    background: linear-gradient(90deg, rgba(25,25,25,1) 40%, rgba(92,92,92,1) 86%);
+}
+
 .home-intro{
     background-image: url("../img/Coffee-background2.avif");
     background-position: center;
@@ -8,7 +13,7 @@
 }
 
 .home-intro-item{
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     min-height: 835px;
     padding-bottom: 40px;
 }
@@ -53,12 +58,29 @@
     font-size: large;
 }
 
-.card-body{
-    color: black;
+.home-card{
+    background: rgb(245,247,250);
+    background: linear-gradient(137deg, rgba(245,247,250,1) 28%, rgba(199,208,222,1) 69%);;
 }
 
 /* create */
 
 .div-spacing{
     margin-top: 24px;
+}
+
+.home-main-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    flex-wrap: nowrap;
+}
+
+.home-main-button button{
+    padding-left: 34px;
+    padding-right: 34px;
+    padding-top: 9px;
+    padding-bottom: 8px;
+    border-radius: 100px;
+    font-size: large;
 }
