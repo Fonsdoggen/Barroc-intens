@@ -34,10 +34,11 @@
               </div>
             @endforeach
         </div>
+
         <div class="container div-spacing" style="padding-bottom: 30px;">
+            @auth
             <a href="{{route('products.create')}}" class="btn btn-success">Product Toevoegen</a>
+            @endauth
         </div>
-
-
-
+        
 @endsection
