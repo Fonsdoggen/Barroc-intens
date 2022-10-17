@@ -20,7 +20,7 @@
     @method('delete')
     <input class="btn btn-danger" type="submit" value="Delete">
 </form>
-<a href="{{route('offerte.create')}}" class="btn btn-success">Offerte aanmaken</a>
+<a href="{{route('offerte.create')}}" class="btn btn-success">Offerte aanvragen</a>
 
 
 @endsection

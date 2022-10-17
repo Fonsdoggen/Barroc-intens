@@ -32,7 +32,9 @@
         @endforeach
     </div>
     <div class="container div-spacing">
+        @auth
         <a href="{{route('products.create')}}" class="btn btn-success">Product Toevoegen</a>
+        @endauth
     </div>
 
 {{--<div class="card" style="width: 18rem;">
