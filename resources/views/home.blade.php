@@ -28,7 +28,7 @@
                   <h5 class="card-title">{{ $product->name }}</h5>
                   <p class="card-text">{{ $product->description }}</p>
                     <div class="home-main-button">
-                        <button type="button" class="btn btn-warning" href="{{route('products.show', $product)}}">Meer informatie -></button>
+                        <a type="button" class="btn btn-warning" href="{{route('products.show', $product)}}">Meer informatie -></a>
                     </div>
                 </div>
               </div>
@@ -40,5 +40,5 @@
             <a href="{{route('products.create')}}" class="btn btn-success">Product Toevoegen</a>
             @endauth
         </div>
-        
+
 @endsection

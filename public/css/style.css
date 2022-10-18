@@ -76,10 +76,10 @@ main .home{
     flex-wrap: nowrap;
 }
 
-.home-main-button button{
+.home-main-button a{
     padding-left: 34px;
     padding-right: 34px;
-    padding-top: 9px;
+    padding-top: 8px;
     padding-bottom: 8px;
     border-radius: 100px;
     font-size: large;
