@@ -24,18 +24,7 @@
               <input type="number" name="price" class="form-control">
             </div>
 
-            <div class="form-group">
-              <label class="div-spacing" for="img_path">Categorie:</label>
-              <div class="col-sm-10">
-                  <select class="form-select"  name="img_path" id="img_path">
-                      <option selected value="0">Kies...</option>
-                      <option value="1">Light</option>
-                      <option value="2">Deluxe</option>
-                  </select>
-              </div>
-            </div>
-
-            <input type="submit" class="div-spacing" value="Product opslaan" class="btn btn-dark">
+            <input type="submit" style="margin-top: 10px;" value="Product opslaan" class="btn btn-dark">
 
         </form>
 @endsection
