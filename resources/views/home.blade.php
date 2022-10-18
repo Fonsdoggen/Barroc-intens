@@ -20,9 +20,9 @@
         <div class="container">
             <h1 id="down" style="color: white; display: flex; justify-content: flex-start; padding-top: 20px">Producten</h1>
         </div>
-        <div class="container" style="display: flex; justify-content: flex-start">
+        <div class="container" style="display: flex; justify-content: flex-start; flex-wrap: wrap">
             @foreach( $products as $product )
-            <div class="card home-card" style="width: 18rem; margin-right: 60px; border-radius: 20px;">
+            <div class="card home-card" style="width: 21rem; margin-right: 95px; border-radius: 20px;">
                 <img class="card-img-top" src="{{asset('img/machine-bit-deluxe.png')}}" alt="Afbeelding van product">
                 <div class="card-body">
                   <h5 class="card-title">{{ $product->name }}</h5>
