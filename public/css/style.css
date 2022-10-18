@@ -60,20 +60,18 @@ main .home{
 
 .home-card{
     background: rgb(245,247,250);
-    background: linear-gradient(137deg, rgba(245,247,250,1) 28%, rgba(199,208,222,1) 69%);;
+    background: linear-gradient(137deg, rgba(245,247,250,1) 28%, rgba(199,208,222,1) 69%);
+    margin-bottom: 50px;
 }
 
-/* create */
-
-.div-spacing{
-    margin-top: 24px;
+.card-body{
+    flex: 1 1 auto;
+    padding: 0rem 1rem 1.2rem;
 }
 
 .home-main-button{
     display: flex;
     justify-content: center;
-    margin-top: 35px;
-    flex-wrap: nowrap;
 }
 
 .home-main-button a{
