@@ -10,7 +10,7 @@
             <div class="flex-wrapper-text">
                 <p>Wij leveren de lekkerste koffie aan bedrijven, horeca- en speciaalzaken. Bent u geinteresseerd? hieronder hebben we een aantal machines staan waar u een keuze uit kan maken.</p>
                 <div class="home-intro-button">
-                    <button type="button" class="btn btn-warning" onClick="document.getElementById('down').scrollIntoView();">Machines</button>
+                    <button type="button" class="btn btn-warning" style="background-color: #FDD716; border: 0px" onClick="document.getElementById('down').scrollIntoView();">Machines</button>
                 </div>
             </div>
         </div>
@@ -28,14 +28,14 @@
                   <h5 class="card-title">{{ $product->name }}</h5>
                   <p class="card-text">{{ $product->description }}</p>
                     <div class="home-main-button">
-                        <a type="button" class="btn btn-warning" href="{{route('products.show', $product)}}">Meer informatie -></a>
+                        <a type="button" class="btn btn-warning" style="background-color: #FDD716; border: 0px;" href="{{route('products.show', $product)}}">Meer informatie -></a>
                     </div>
                 </div>
               </div>
             @endforeach
         </div>
 
-        <div class="container div-spacing" style="padding-bottom: 30px;">
+        <div class="container div-spacing" style="padding-bottom: 30px; margin-top: -20px;">
             @auth
             <a href="{{route('products.create')}}" class="btn btn-success">Product Toevoegen</a>
             @endauth
