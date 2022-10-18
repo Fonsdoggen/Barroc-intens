@@ -12,27 +12,27 @@
                     <form method="Post" action="{{route('companies.store')}}">
                         @csrf
                         <div class="form-group">
-                            <label for="Name">Name:</label>
+                            <label for="Name">Naam:</label>
                             <input type="text" name="Name" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="phone">Phone-Number:</label>
+                            <label for="phone">Telefoonnummer:</label>
                             <input type="number" name="phone" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="street">Streetname:</label>
+                            <label for="street">Straat:</label>
                             <input type="text" name="street" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="house_number">Housenumber:</label>
+                            <label for="house_number">Huisnummer:</label>
                             <input type="Number" name="house_number" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="city">City:</label>
+                            <label for="city">Stad:</label>
                             <input type="text" name="city" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="country_code">Country-code:</label>
+                            <label for="country_code">Land-code:</label>
                             <input type="number" name="country_code" class="form-control">
                         </div>
 
