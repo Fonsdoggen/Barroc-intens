@@ -17,8 +17,12 @@ return new class extends Migration
             $table->id();
             $table->longText('note');
             $table->dateTime('date');
-            $table->integer('company_id');
-            $table->integer('author_id');
+            $table->foreignId('author_id')
+                ->references('id')
+                ->on('users');
+            $table->foreignId('company_id')
+                ->references('id')
+                ->on('companies');
             $table->timestamps();
         });
     }

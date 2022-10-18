@@ -14,11 +14,15 @@ return new class extends Migration
     public function up()
     {
         Schema::create('custom_invoice_products', function (Blueprint $table) {
-            $table->integer('custom_invoice_id');
-            $table->integer('product_id');
             $table->id();
             $table->integer('amount');
             $table->decimal('price_per_product');
+            $table->foreignId('custom_invoice_id')
+                ->references('id')
+                ->on('custom_invoices');
+            $table->foreignId('product_id')
+                ->references('id')
+                ->on('products');
             $table->timestamps();
         });
     }

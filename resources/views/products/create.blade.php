@@ -25,9 +25,9 @@
             </div>
 
             <div class="form-group">
-              <label class="div-spacing" for="product_category_id">Categorie:</label>
+              <label class="div-spacing" for="img_path">Categorie:</label>
               <div class="col-sm-10">
-                  <select class="form-select"  name="product_category_id" id="product_category_id">
+                  <select class="form-select"  name="img_path" id="img_path">
                       <option selected value="0">Kies...</option>
                       <option value="1">Light</option>
                       <option value="2">Deluxe</option>

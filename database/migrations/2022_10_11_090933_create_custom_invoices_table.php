@@ -22,7 +22,9 @@ return new class extends Migration
             $table->bigInteger('tel-nummer');
             $table->dateTime('date');
             $table->dateTime('paid_at')->nullable();
-            $table->integer('company_id')->nullable();
+            $table->foreignId('company_id')
+                ->references('id')
+                ->on('companies');
             $table->timestamps();
         });
     }
