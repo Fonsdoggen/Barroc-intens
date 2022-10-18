@@ -15,9 +15,14 @@ return new class extends Migration
     {
         Schema::create('custom_invoices', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('street');
+            $table->string('postcode');
+            $table->string('email');
+            $table->bigInteger('tel-nummer');
             $table->dateTime('date');
-            $table->dateTime('paid_at');
-            $table->integer('company_id');
+            $table->dateTime('paid_at')->nullable();
+            $table->integer('company_id')->nullable();
             $table->timestamps();
         });
     }

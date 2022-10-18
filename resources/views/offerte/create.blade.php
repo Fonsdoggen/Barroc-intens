@@ -4,11 +4,31 @@
     <h1>Offerte aanvragen</h1>
     <form action="{{route('offerte.store')}}" method="post">
         @csrf
-        <div class="mb-3">
+        <div class="form-group">
+            <label for="name">Naam:</label>
+            <input type="text" name="name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="street">Straat:</label>
+            <input type="text" name="street" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="postcode">Postcode:</label>
+            <input type="text" name="postcode" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="tel-nummer">Telefoonnummer:</label>
+            <input type="number" name="tel-nummer" class="form-control">
+        </div>
+        <div class="form-group">
             <label class="form-label">Datum:</label>
             <input type="date" name="date" class="form-control">
         </div>
-        <div class="mb-3">
+        <div class="form-group">
             <label class="form-label">Betaald op:</label>
             <input type="date" name="paid_at" class="form-control">
         </div>

@@ -16,7 +16,7 @@ class OfferteController extends Controller
     public function index()
     {
         $products = Product::orderBy('price')->get();
-        return view('home', [
+        return view('products.index', [
             'products' => $products
         ]);
     }
@@ -40,7 +40,7 @@ class OfferteController extends Controller
     public function store(Request $request)
     {
         Invoices::create($request->except('_token'));
-        return redirect()->route('home');
+        return redirect()->route('products.index');
     }
 
     /**
