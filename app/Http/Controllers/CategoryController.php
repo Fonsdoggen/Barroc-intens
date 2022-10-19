@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Companies;
 use Illuminate\Http\Request;
+use App\Models\Category;
 
-class CompanyController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        $companies = Companies::all();
-        return view('/company', ['companies' => $companies]);
+        $categorieen = Category::all();
+        return view('/category', ['catergorieen' => $categorieen]);
     }
 
     /**
@@ -25,7 +25,7 @@ class CompanyController extends Controller
      */
     public function create()
     {
-        return view('companies.create');
+        return view('categorieen.create');
     }
 
     /**
@@ -36,8 +36,8 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        Companies::create($request->except('_token'));
-        return redirect()->route('companies.index')->with('message', 'Je hebt een bedrijf toegevoegd');
+        Category::create($request->except('_token'));
+        return redirect()->route('category.index')->with('message', 'Je hebt een categorie toegevoegd');
     }
 
     /**
@@ -82,7 +82,7 @@ class CompanyController extends Controller
      */
     public function destroy($id)
     {
-        Companies::destroy($id);
-        return redirect()->route('companies.index')->with('message', 'Verwijderen');
+        Category::destroy($id);
+        return redirect()->route('category.index')->with('message', 'Verwijderd');
     }
 }

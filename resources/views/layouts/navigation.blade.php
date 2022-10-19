@@ -23,6 +23,10 @@
                     <x-nav-link :href="route('companies.index')" :active="request()->routeIs('companies.index')">
                         {{ __('Bedrijven toevoegen') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('category.index')" :active="request()->routeIs('category.index')">
+                        {{ __('Catergorie toevoegen') }}
+                    </x-nav-link>
+
 
                 </div>
             </div>
