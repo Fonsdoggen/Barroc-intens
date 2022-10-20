@@ -1,9 +1,5 @@
 /* header */
 
-
-
-
-
 /* home */
 
 main .home{
@@ -63,6 +59,35 @@ main .home{
     border-radius: 100px;
     font-size: large;
 }
+
+/* search bar */
+
+.product-search-bar{
+    margin-top: 13px;
+    margin-bottom: 17px;
+}
+
+.product-search-ul{
+    list-style-type: none;
+    background-color: #ffffff;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-radius: 3px;
+    width: max-content;
+}
+
+.product-search-ul li{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #0d6efd;
+}
+
+.product-search-ul li:hover{
+    color: #0a58ca;
+    cursor: pointer;
+}
+
+/* cards */
 
 .home-card{
     background: rgb(245,247,250);
