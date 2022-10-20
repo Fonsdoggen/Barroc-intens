@@ -19,10 +19,10 @@ return new class extends Migration
             $table->string('description');
             $table->string('image_path')->nullable();
             $table->decimal('price');
+            $table->timestamps();
             $table->foreignId('product_category_id')
                 ->references('id')
                 ->on('product_categories');
-            $table->timestamps();
         });
     }
 

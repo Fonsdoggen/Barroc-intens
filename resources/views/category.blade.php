@@ -15,9 +15,9 @@
                     <div class="container">
                         <table>
                             <tr>
-                                <th>Catergorie:</th>
+                                <th>Categorie:</th>
                             </tr>
-                            @foreach($categorieen as $category)
+                            @foreach($product_categories as $category)
                                 <tr>
                                     <td>{{$category->name}}</td>
                                 </tr>

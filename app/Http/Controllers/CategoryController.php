@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Category;
+use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
@@ -14,8 +14,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categorieen = Category::all();
-        return view('/category', ['catergorieen' => $categorieen]);
+        $product_categories = Category::all();
+        return view('/category', ['product_categories' => $product_categories]);
     }
 
     /**

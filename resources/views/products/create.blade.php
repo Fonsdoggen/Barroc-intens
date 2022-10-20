@@ -24,6 +24,15 @@
               <input type="number" name="price" class="form-control">
             </div>
 
+            <div class="form-group">
+                <label for="product_category_id" class="div-spacing">Categorie</label>
+                <select name="product_category_id" >
+                    @foreach($product_categories as $category)
+                        <option>{{$category->id}}</option>
+                    @endforeach
+                </select>
+            </div>
+
             <input type="submit" style="margin-top: 10px;" value="Product opslaan" class="btn btn-dark">
 
         </form>
