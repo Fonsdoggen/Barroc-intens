@@ -30,8 +30,25 @@ Route::resource('products', ProductsController::Class);
 
 Route::resource('offerte',OfferteController::class);
 
+// Dashboard
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/inkoop', function () {
+    return view('inkoop');})->name('inkoop');
+
+Route::get('/finance', function () {
+    return view('dashboard/finance');})->name('finance');
+
+Route::get('/inkoop', function () {
+    return view('dashboard/inkoop');})->name('inkoop');
+
+Route::get('/maintenance', function () {
+    return view('dashboard/maintenance');})->name('maintenance');
+
+Route::get('/sales', function () {
+    return view('dashboard/sales');})->name('sales');
 
 require __DIR__.'/auth.php';

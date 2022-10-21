@@ -13,6 +13,7 @@
 {{--                </div>--}}
 
                 <!-- Navigation Links -->
+
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('products.index')" :active="request()->routeIs('products.index')">
                         {{ __('Home') }}
@@ -24,11 +25,30 @@
                         {{ __('Bedrijven toevoegen') }}
                     </x-nav-link>
                     <x-nav-link :href="route('category.index')" :active="request()->routeIs('category.index')">
-                        {{ __('Catergorie toevoegen') }}
+                        {{ __('Categorie toevoegen') }}
                     </x-nav-link>
-
-
+                    @if (Auth::user()->role_id == 1)
+                    <x-nav-link :href="route('finance')" :active="request()->routeIs('finance')">
+                        {{ __('Finance') }}
+                    </x-nav-link>
+                    @endif
+                    @if (Auth::user()->role_id == 2)
+                    <x-nav-link :href="route('inkoop')" :active="request()->routeIs('inkoop')">
+                        {{ __('Inkoop') }}
+                    </x-nav-link>
+                    @endif
+                    @if (Auth::user()->role_id == 3)
+                    <x-nav-link :href="route('maintenance')" :active="request()->routeIs('maintenance')">
+                        {{ __('Maintenance') }}
+                    </x-nav-link>
+                    @endif
+                    @if (Auth::user()->role_id == 4)
+                    <x-nav-link :href="route('sales')" :active="request()->routeIs('sales')">
+                        {{ __('Sales') }}
+                    </x-nav-link>
+                    @endif
                 </div>
+
             </div>
 
             <!-- Settings Dropdown -->
