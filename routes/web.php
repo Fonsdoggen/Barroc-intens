@@ -36,9 +36,6 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/inkoop', function () {
-    return view('inkoop');})->name('inkoop');
-
 Route::get('/finance', function () {
     return view('dashboard/finance');})->name('finance');
 

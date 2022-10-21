@@ -25,7 +25,8 @@
             </div>
             <ul class="product-search-ul" id="myUL">
                 @foreach( $products as $product )
-                    <li style="display: none"><a onclick="window.location.href='{{route('products.show', $product)}}'"<a>{{ $product->name }}</a></li>
+                    <li style="display: none"><a onclick="window.location.href='{{route('products.show', $product)}}'"<a>{{$product->name}}</a></li>
+                    <li style="display: none"><a onclick="window.location.href='{{route('products.show', $product)}}'"<a>{{$product->description}}</a></li>
                 @endforeach
             </ul>
         </div>
