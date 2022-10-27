@@ -32,7 +32,16 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+        if (Auth::user()->role_id == 1)
+            return redirect()->intended('finance');
+        elseif (Auth::user()->role_id == 2)
+            return redirect()->intended('inkoop');
+        elseif (Auth::user()->role_id == 3)
+            return redirect()->intended('maintenance');
+        elseif (Auth::user()->role_id == 4)
+            return redirect()->intended('sales');
+        elseif (Auth::user()->role_id == 0 || Auth::user()->role_id > 4);
+            return redirect()->intended('dashboard');
     }
 
     /**
