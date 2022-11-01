@@ -32,6 +32,15 @@
             <label class="form-label">Betaald op:</label>
             <input type="date" name="paid_at" class="form-control">
         </div>
+
+        <div class="form-group">
+                <label for="company_id" class="div-spacing">Company</label>
+                <select name="company_id" >
+                    @foreach($companies as $company)
+                        <option>{{$company->id}}</option>
+                    @endforeach
+                </select>
+            </div>
         <div class="form-group">
             <input class="mt-4 btn btn-primary" type="submit" value="Opslaan">
         </div>

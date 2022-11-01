@@ -25,6 +25,7 @@ class CompanyController extends Controller
      */
     public function create()
     {
+        $companies = Companies::all();
         return view('companies.create');
     }
 

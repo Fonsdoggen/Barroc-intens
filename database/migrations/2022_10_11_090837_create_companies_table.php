@@ -18,11 +18,13 @@ return new class extends Migration
             $table->string('name');
             $table->string('phone');
             $table->string('street');
-            $table->string('house_number');
+            $table->string('house_number', 45);
             $table->string('city');
-            $table->string('country_code');
+            $table->string('country_code', 3);
             $table->dateTime('bkr_checked_at')->nullable();
-            $table->Integer('contact_id');
+            $table->foreignId('contact_id')
+                ->references('id')
+                ->on('users');
             $table->timestamps();
         });
     }

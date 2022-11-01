@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Invoices;
 use App\Models\Product;
+use App\Models\Companies;
 
 class OfferteController extends Controller
 {
@@ -28,7 +29,10 @@ class OfferteController extends Controller
      */
     public function create()
     {
-        return view('offerte/create');
+        $companies = Companies::all();
+        return view('offerte/create', [
+            'companies' => $companies
+        ]);
     }
 
     /**

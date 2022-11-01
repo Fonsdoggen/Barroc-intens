@@ -33,9 +33,16 @@
                         </div>
                         <div class="form-group">
                             <label for="country_code">Land-code:</label>
-                            <input type="number" name="country_code" class="form-control">
+                            <input type="text" name="country_code" class="form-control">
                         </div>
-
+                        <div class="form-group">
+                            <label for="contact_id">Contact persoon voor bedrijf:</label>
+                            <select name="contact_id">
+                                @foreach($users as $user)
+                                    <option></option>
+                                @endforeach
+                            </select>
+                        </div>
                         <input type="submit" style="margin-top: 10px;" value="Opslaan" class="btn btn-primary">
                     </form>
                 </div>
