@@ -41,8 +41,7 @@ class ProductsController extends Controller
     public function store(Request $request)
     {
         Product::create($request->except('_token'));
-        return redirect()
-        ->route('products.index');
+        return redirect()->intended('');
     }
 
     /**
@@ -67,9 +66,9 @@ class ProductsController extends Controller
      */
     public function edit($id)
     {
+        $product_categories = Category::all();
         $product = Product::findOrFail($id);
-        return view('products.edit', [
-            'product' => $product
+        return view('products.edit', ['product' => $product], ['product_categories' => $product_categories
         ]);
     }
 
@@ -84,8 +83,7 @@ class ProductsController extends Controller
     {
         $product = Product::findOrFail($id);
         $product->update($request->except(['_token', '_method']));
-        return redirect()
-        ->route('products.index');
+        return redirect()->intended('');
     }
 
     /**
@@ -97,7 +95,6 @@ class ProductsController extends Controller
     public function destroy($id)
     {
         Product::destroy($id);
-        return redirect()
-        ->route('products.index');
+        return redirect()->intended('');
     }
 }

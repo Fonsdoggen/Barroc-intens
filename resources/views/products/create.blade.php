@@ -25,10 +25,10 @@
             </div>
 
             <div class="form-group">
-                <label for="product_category_id" class="div-spacing">Categorie</label>
+                <label for="product_category_id" class="div-spacing">Categorie:</label>
                 <select name="product_category_id" >
                     @foreach($product_categories as $category)
-                        <option>{{$category->id}}</option>
+                        <option value="{{$category->id}}">{{$category->name}}</option>
                     @endforeach
                 </select>
             </div>
