@@ -43,7 +43,7 @@
                     </x-nav-link>
                     @endif
                     @if (Auth::user()->role_id == 4)
-                    <x-nav-link :href="route('sales')" :active="request()->routeIs('sales')">
+                    <x-nav-link :href="route('sales.index')" :active="request()->routeIs('sales.index')">
                         {{ __('Sales') }}
                     </x-nav-link>
                     @endif

@@ -6,6 +6,7 @@ use App\Http\Controllers\OfferteController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ClientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,7 +46,9 @@ Route::get('/inkoop', function () {
 Route::get('/maintenance', function () {
     return view('dashboard/maintenance');})->name('maintenance');
 
-Route::get('/sales', function () {
-    return view('dashboard/sales');})->name('sales');
+// Route::get('/sales', function () {
+//     return view('dashboard/sales');})->name('sales');
+
+Route::resource('dashboard/sales', ClientController::Class);
 
 require __DIR__.'/auth.php';

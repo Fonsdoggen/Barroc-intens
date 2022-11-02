@@ -39,7 +39,7 @@ class AuthenticatedSessionController extends Controller
         elseif (Auth::user()->role_id == 3)
             return redirect()->intended('maintenance');
         elseif (Auth::user()->role_id == 4)
-            return redirect()->intended('sales');
+            return redirect()->intended('dashboard/sales');
         elseif (Auth::user()->role_id == 0 || Auth::user()->role_id > 4);
             return redirect()->intended('dashboard');
     }
