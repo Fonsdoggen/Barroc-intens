@@ -37,7 +37,7 @@
                 <label for="company_id" class="div-spacing">Company</label>
                 <select name="company_id" >
                     @foreach($companies as $company)
-                        <option>{{$company->id}}</option>
+                        <option value="{{$company->id}}">{{$company->name}}</option>
                     @endforeach
                 </select>
             </div>

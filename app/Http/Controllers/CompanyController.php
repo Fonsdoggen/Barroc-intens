@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Companies;
 use Illuminate\Http\Request;
+use App\Models\Client;
 
 class CompanyController extends Controller
 {
@@ -25,8 +26,9 @@ class CompanyController extends Controller
      */
     public function create()
     {
+        $clients = Client::all();
         $companies = Companies::all();
-        return view('companies.create');
+        return view('companies.create', ['companies' => $companies], ['clients' => $clients]);
     }
 
     /**

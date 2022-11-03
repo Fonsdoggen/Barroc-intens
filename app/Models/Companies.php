@@ -10,4 +10,9 @@ class Companies extends Model
     use HasFactory;
     protected $table = 'companies';
     protected $guarded = [];
+
+    public function getUser()
+    {
+        return $this->belongsTo(User::class, 'contact_id', 'id');
+    }
 }

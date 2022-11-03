@@ -12,7 +12,7 @@
                     <form method="Post" action="{{route('companies.store')}}">
                         @csrf
                         <div class="form-group">
-                            <label for="Name">Naam:</label>
+                            <label for="Name">Bedrijfsnaam:</label>
                             <input type="text" name="Name" class="form-control">
                         </div>
                         <div class="form-group">
@@ -37,9 +37,9 @@
                         </div>
                         <div class="form-group">
                             <label for="contact_id">Contact persoon voor bedrijf:</label>
-                            <select name="contact_id">
-                                @foreach($users as $user)
-                                    <option></option>
+                            <select name="contact_id" class="form-control">
+                                @foreach($clients as $client)
+                                    <option value="{{$client->id}}">{{$client->name}}</option>
                                 @endforeach
                             </select>
                         </div>
