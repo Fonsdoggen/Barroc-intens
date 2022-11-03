@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Companies') }}
+            {{ __('Bedrijven') }}
         </h2>
     </x-slot>
 
@@ -32,7 +32,7 @@
                             <input type="text" name="city" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="country_code">Land-code:</label>
+                            <label for="country_code">Land-code (3 letters):</label>
                             <input type="text" name="country_code" class="form-control">
                         </div>
                         <div class="form-group">
