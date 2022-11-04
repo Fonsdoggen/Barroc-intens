@@ -22,16 +22,16 @@
                             </thead>
                             <tbody>
                                 @foreach( $clients as $client )
-                              <tr>
-                                <th scope="row">{{$client->id}}</th>
-                                <td>{{$client->name}}</td>
-                                <td>{{$client->email}}</td>
-                                <td>{{$client->password}}</td>
+                                <tr>
+                                    <th scope="row">{{$client->id}}</th>
+                                    <td>{{$client->name}}</td>
+                                    <td>{{$client->email}}</td>
+                                    <td>{{$client->password}}</td>
                               </tr>
                                 @endforeach
                             </tbody>
-                          </table>
-                          
+                        </table>
+
                           <a href="{{route('sales.create')}}" class="btn btn-success">Gebruiker Toevoegen</a>
 
                 @else

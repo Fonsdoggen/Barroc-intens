@@ -10,9 +10,9 @@
     <h3>Omschrijving</h3>
     <p>{{$product->description}}</p>
     <br>
-    <h3>Prijs</h3>
+    {{-- <h3>Prijs</h3>
     <p>{{$product->price}}</p>
-    <br>
+    <br> --}}
     <a type="button" class="btn btn-warning" style="background-color: #FDD716; border: 0px;" href="{{route('products.index')}}"><- Terug</a>
     <a href="{{route('products.edit', $product)}}" class="btn btn-dark">Edit</a>
     <form method="POST" action="{{route('products.destroy', $product)}}">
