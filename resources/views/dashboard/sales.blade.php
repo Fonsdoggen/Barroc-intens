@@ -11,15 +11,14 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                 @if (!Auth::guest() && Auth::user()->role_id == 4)
                     {{--<p>Schrijf hier je code</p>--}}
-                    <a href="{{route('sales.create')}}" class="btn btn-success">Gebruiker Toevoegen</a>
-                        <table class="table table-striped">
-                            <thead>
-                              <tr>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
                                 <th scope="col">ID</th>
                                 <th scope="col">Naam</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Wachtwoord</th>
-                              </tr>
+                            </tr>
                             </thead>
                             <tbody>
                                 @foreach( $clients as $client )
@@ -32,11 +31,13 @@
                                 @endforeach
                             </tbody>
                           </table>
+                          
+                          <a href="{{route('sales.create')}}" class="btn btn-success">Gebruiker Toevoegen</a>
 
                 @else
                     <p>Je bent niet van deze afdeling</p>
                 @endif
-                <div class="p-6 bg-white border-b border-gray-200">
+                </div>
             </div>
         </div>
     </div>
