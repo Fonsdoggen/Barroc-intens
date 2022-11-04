@@ -33,7 +33,7 @@ class AuthenticatedSessionController extends Controller
         $request->session()->regenerate();
 
         if (Auth::user()->role_id == 1)
-            return redirect()->intended('finance');
+            return redirect()->intended('dashboard/finance');
         elseif (Auth::user()->role_id == 2)
             return redirect()->intended('inkoop');
         elseif (Auth::user()->role_id == 3)

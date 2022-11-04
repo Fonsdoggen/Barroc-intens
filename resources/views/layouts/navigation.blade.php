@@ -28,7 +28,7 @@
                         {{ __('Categorie toevoegen') }}
                     </x-nav-link>
                     @if (Auth::user()->role_id == 1)
-                    <x-nav-link :href="route('finance')" :active="request()->routeIs('finance')">
+                    <x-nav-link :href="route('finance.index')" :active="request()->routeIs('finance.index')">
                         {{ __('Finance') }}
                     </x-nav-link>
                     @endif

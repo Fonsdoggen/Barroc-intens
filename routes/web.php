@@ -7,6 +7,7 @@ use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\FinanceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,8 +38,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/finance', function () {
-    return view('dashboard/finance');})->name('finance');
+Route::resource('dashboard/finance', FinanceController::Class);
 
 Route::get('/inkoop', function () {
     return view('dashboard/inkoop');})->name('inkoop');
