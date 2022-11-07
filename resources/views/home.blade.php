@@ -60,7 +60,7 @@
         <div class="container" style="display: flex; justify-content: flex-start; flex-wrap: wrap">
             @foreach( $products as $product )
             <div class="card home-card" style="width: 21rem; margin-right: 95px; border-radius: 20px;">
-                <img class="card-img-top" src="{{asset('img/machine-bit-deluxe.png')}}" alt="Afbeelding van product">
+                <img class="card-img-top" src="{{asset($product->image_path)}}" alt="Afbeelding van product">
                 <div class="card-body">
                   <h5 class="card-title">{{ $product->name }}</h5>
                   <p class="card-text">{{ $product->description }}</p>

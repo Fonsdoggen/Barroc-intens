@@ -16,11 +16,6 @@
         </div>
 
         <div class="form-group">
-            <label class="div-spacing" for="">Afbeelding:</label>
-            <input type="file" name="image_path" class="form-control">
-        </div>
-
-        <div class="form-group">
             <label class="div-spacing" for="">Prijs:</label>
             <input type="number" name="price" value="{{$product->price}}" class="form-control">
         </div>
@@ -31,6 +26,15 @@
                 @foreach($product_categories as $category)
                     <option value="{{$category->id}}">{{$category->name}}</option>
                 @endforeach
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="image_path" class="div-spacing">Afbeelding:</label>
+            <select name="image_path">
+                <option value="{{'img/machine-bit-light.png'}}">Light</option>
+                <option value="{{'img/machine-bit-deluxe.png'}}">Deluxe</option>
+                <option value="{{'img/Coffee.jpg'}}">Coffee</option>
             </select>
         </div>
 

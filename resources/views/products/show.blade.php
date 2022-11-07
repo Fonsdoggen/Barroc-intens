@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="test">
-    <img src="{{asset('img/machine-bit-deluxe.png')}}" style="width:420px;height:420px;margin:69px 169px 69px 0px;float:left;" alt="Afbeelding van product">
+    <img src="{{asset($product->image_path)}}" style="width:420px;height:420px;margin:69px 169px 69px 0px;float:left;" alt="Afbeelding van product">
     <br>
     <h1 style="margin-top:69px;">{{$product->name}}</h1>
     <br>
@@ -13,7 +13,7 @@
     {{-- <h3>Prijs</h3>
     <p>{{$product->price}}</p>
     <br> --}}
-    <a type="button" class="btn btn-warning" style="background-color: #FDD716; border: 0px;" href="{{route('products.index')}}"><- Terug</a>
+    <a type="button" class="btn btn-warning" style="background-color: #FDD716; border: 0px;" href="{{url()->previous()}}"><- Terug</a>
     <a href="{{route('products.edit', $product)}}" class="btn btn-dark">Edit</a>
     <form method="POST" action="{{route('products.destroy', $product)}}">
         @csrf

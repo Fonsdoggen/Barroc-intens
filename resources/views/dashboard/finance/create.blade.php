@@ -29,7 +29,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="">Factuur:</label>
+                            <label for="">Offerte:</label>
                             <input type="number" name="custom_invoice_id" class="form-control">
                         </div>
 

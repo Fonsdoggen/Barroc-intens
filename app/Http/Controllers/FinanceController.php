@@ -62,7 +62,8 @@ class FinanceController extends Controller
      */
     public function edit($id)
     {
-        //
+        $finance = Finance::findOrFail($id);
+        return view('finance.edit', ['finance' => $finance]);
     }
 
     /**
@@ -74,7 +75,10 @@ class FinanceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $finance = Finance::findOrFail($id);
+        $finance->update($request->except(['_token', '_method']));
+        return redirect()
+            ->route('finance.index');
     }
 
     /**
@@ -85,6 +89,7 @@ class FinanceController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Finance::destroy($id);
+        return redirect()->intended('');
     }
 }

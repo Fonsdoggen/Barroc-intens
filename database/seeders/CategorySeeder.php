@@ -23,5 +23,9 @@ class CategorySeeder extends Seeder
             'name' => 'Deluxe',
             'is_employee_only' => '2',
         ]);
+        DB::table('product_categories')->insert([
+            'name' => 'Coffee',
+            'is_employee_only' => '2',
+        ]);
     }
 }
