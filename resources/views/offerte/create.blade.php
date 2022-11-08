@@ -28,6 +28,7 @@
             <label class="form-label">Datum:</label>
             <input type="date" name="date" class="form-control">
         </div>
+        
         {{-- <div class="form-group">
             <label class="form-label">Betaald op:</label>
             <input type="date" name="paid_at" class="form-control">
