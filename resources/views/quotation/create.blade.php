@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>Offerte aanvragen</h1>
-    <form action="{{route('offerte.store')}}" method="post">
+    <form action="{{route('quotation.store')}}" method="post">
         @csrf
         <div class="form-group">
             <label for="name">Naam:</label>

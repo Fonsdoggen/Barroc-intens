@@ -68,7 +68,7 @@
                         <a type="button" class="btn btn-warning" style="background-color: #FDD716; border: 0px;" href="{{route('products.show', $product)}}">Meer informatie -></a>
                     </div>
                     <div class="home-main-button" style="margin-top: 21px;">
-                        <a href="{{route('offerte.create')}}" class="btn btn-success" style="margin-bottom:69px;">Offerte aanvragen</a>
+                        <a href="{{route('quotation.create')}}" class="btn btn-success" style="margin-bottom:69px;">Offerte aanvragen</a>
                     </div>
                 </div>
               </div>

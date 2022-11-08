@@ -7,7 +7,7 @@ use App\Models\Invoices;
 use App\Models\Product;
 use App\Models\Companies;
 
-class OfferteController extends Controller
+class InvoiceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -30,7 +30,7 @@ class OfferteController extends Controller
     public function create()
     {
         $companies = Companies::all();
-        return view('offerte/create', [
+        return view('factuur/create', [
             'companies' => $companies
         ]);
     }
