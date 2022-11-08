@@ -13,15 +13,17 @@
     {{-- <h3>Prijs</h3>
     <p>{{$product->price}}</p>
     <br> --}}
-    <a type="button" class="btn btn-warning" style="background-color: #FDD716; border: 0px;" href="{{url()->previous()}}"><- Terug</a>
-    <a href="{{route('products.edit', $product)}}" class="btn btn-dark">Edit</a>
-    <form method="POST" action="{{route('products.destroy', $product)}}">
-        @csrf
-        @method('delete')
-        <input class="btn btn-danger" type="submit" value="Delete">
-    </form>
-    <a href="{{route('offerte.create')}}" class="btn btn-success" style="margin-bottom:69px;">Offerte aanvragen</a>
+    <div class="div" style="margin-bottom: 150px">
+        <a type="button" class="btn btn-warning" style="background-color: #FDD716; border: 0px;" href="{{url()->previous()}}"><- Terug</a>
+        @if (!Auth::guest() && Auth::user()->role_id == 2)
+            <a href="{{route('products.edit', $product)}}" class="btn btn-dark">Edit</a>
+            <form method="POST" action="{{route('products.destroy', $product)}}">
+                @csrf
+                @method('delete')
+                <input class="btn btn-danger" type="submit" value="Delete">
+            </form>
+        @endif
     </div>
-
+</div>
 
 @endsection
