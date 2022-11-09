@@ -10,9 +10,10 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     @if (!Auth::guest() && Auth::user()->role_id == 1)
-                        <h3>Leasecontract aanmaken</h3>
+                        <h3>Leasecontract wijzigen</h3>
                         <form method="post" action="{{route('finance.update', $finance)}}">
                             @csrf
+                            @method('PUT')
                             <div class="form-group">
                                 <label for="">Producten:</label>
                                 <input type="number" name="product_id" class="form-control">

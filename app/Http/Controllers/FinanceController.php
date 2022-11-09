@@ -51,7 +51,10 @@ class FinanceController extends Controller
      */
     public function show($id)
     {
-        //
+        $finance = Finance::findOrFail($id);
+        return view('finance.show', [
+            'finance' => $finance
+        ]);
     }
 
     /**
@@ -63,7 +66,7 @@ class FinanceController extends Controller
     public function edit($id)
     {
         $finance = Finance::findOrFail($id);
-        return view('finance.edit', ['finance' => $finance]);
+        return view('dashboard.finance.edit', ['finance' => $finance]);
     }
 
     /**
@@ -90,6 +93,6 @@ class FinanceController extends Controller
     public function destroy($id)
     {
         Finance::destroy($id);
-        return redirect()->intended('');
+        return redirect()->intended('dashboard/finance');
     }
 }
