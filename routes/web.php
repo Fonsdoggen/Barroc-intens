@@ -2,12 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
-use App\Http\Controllers\OfferteController;
+use App\Http\Controllers\FactuurController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ClientController;
-use App\Http\Controllers\FinanceController;
+use App\Http\Controllers\InvoiceController;
+use App\Http\Controllers\QuotationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,9 +29,11 @@ Route::resource('companies', CompanyController::class)->middleware(['auth']);
 
 Route::resource('category', CategoryController::class)->middleware(['auth']);
 
-Route::resource('products', ProductsController::Class);
+Route::resource('products', ProductsController::class);
 
-Route::resource('offerte',OfferteController::class);
+Route::resource('factuur', InvoiceController::class);
+
+Route::resource('quotation', QuotationController::class);
 
 // Dashboard
 

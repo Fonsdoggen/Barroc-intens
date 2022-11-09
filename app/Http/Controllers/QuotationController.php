@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use \App\Models\Finance;
+use App\Models\quotation;
+use App\Models\Product;
+use App\Models\Companies;
 
-class FinanceController extends Controller
+class QuotationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +16,9 @@ class FinanceController extends Controller
      */
     public function index()
     {
-        $finance = Finance::all();
-        return view('dashboard/finance', [
-            'finance' => $finance
+        $products = Product::orderBy('price')->get();
+        return view('products.index', [
+            'products' => $products
         ]);
     }
 
@@ -27,7 +29,10 @@ class FinanceController extends Controller
      */
     public function create()
     {
-        return view('dashboard/finance/create');
+        $companies = Companies::all();
+        return view('quotation/create', [
+            'companies' => $companies
+        ]);
     }
 
     /**
@@ -38,9 +43,8 @@ class FinanceController extends Controller
      */
     public function store(Request $request)
     {
-        Finance::create($request->except('_token'));
-        return redirect()
-            ->route('finance.index');
+        quotation::create($request->except('_token'));
+        return redirect()->route('products.index');
     }
 
     /**
@@ -51,10 +55,7 @@ class FinanceController extends Controller
      */
     public function show($id)
     {
-        $finance = Finance::findOrFail($id);
-        return view('finance.show', [
-            'finance' => $finance
-        ]);
+        //
     }
 
     /**
@@ -65,8 +66,7 @@ class FinanceController extends Controller
      */
     public function edit($id)
     {
-        $finance = Finance::findOrFail($id);
-        return view('dashboard.finance.edit', ['finance' => $finance]);
+        //
     }
 
     /**
@@ -78,10 +78,7 @@ class FinanceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $finance = Finance::findOrFail($id);
-        $finance->update($request->except(['_token', '_method']));
-        return redirect()
-            ->route('finance.index');
+        //
     }
 
     /**
@@ -92,7 +89,6 @@ class FinanceController extends Controller
      */
     public function destroy($id)
     {
-        Finance::destroy($id);
-        return redirect()->intended('dashboard/finance');
+        //
     }
 }

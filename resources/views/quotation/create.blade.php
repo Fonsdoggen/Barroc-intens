@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>Offerte aanvragen</h1>
-    <form action="{{route('offerte.store')}}" method="post">
+    <form action="{{route('quotation.store')}}" method="post">
         @csrf
         <div class="form-group">
             <label for="name">Naam:</label>
@@ -28,6 +28,7 @@
             <label class="form-label">Datum:</label>
             <input type="date" name="date" class="form-control">
         </div>
+        
         {{-- <div class="form-group">
             <label class="form-label">Betaald op:</label>
             <input type="date" name="paid_at" class="form-control">
