@@ -23,7 +23,7 @@
                         <input type="email" name="email" class="form-control">
                     </div>
 
-                    <input type="hidden" name="password" value="Gebruiker heeft nog geen wachtwoord." class="form-control">
+                    <input type="hidden" name="password" value="$2y$10$dXrC3xBmlXjNvcX/spuU2.nQVwxCkSBBJ5BX5HQ/Nz/FBRWLZo1.W" class="form-control">
 
                     <input type="submit" style="margin-top: 10px;" value="Gebruiker opslaan" class="btn btn-dark">
 
