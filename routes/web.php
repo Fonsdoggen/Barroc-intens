@@ -35,6 +35,9 @@ Route::resource('factuur', InvoiceController::class);
 
 Route::resource('quotation', QuotationController::class);
 
+Route::get('/privacyverklaring', function() {
+    return view('privacyverklaring');
+})->name('privacyverklaring');
 // Dashboard
 
 Route::get('/dashboard', function () {
