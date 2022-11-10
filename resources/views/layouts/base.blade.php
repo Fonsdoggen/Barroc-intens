@@ -173,13 +173,12 @@
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                    <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                    <p><i class="fas fa-home me-3"></i>4826 AA Breda</p>
                     <p>
                         <i class="fas fa-envelope me-3"></i>
-                        info@example.com
+                        info@barrocintens.nl
                     </p>
-                    <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-                    <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                    <p><i class="fas fa-phone me-3"></i>+31(0)76 - 5733444</p>
                 </div>
                 <!-- Grid column -->
             </div>
