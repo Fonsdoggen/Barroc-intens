@@ -25,16 +25,14 @@
                                     <th scope="row">{{$client->id}}</th>
                                     <td>{{$client->name}}</td>
                                     <td>{{$client->email}}</td>
-                              </tr>
+                                </tr>
                                 @endforeach
                             </tbody>
                         </table>
-
-                          <a href="{{route('sales.create')}}" class="btn btn-success">Gebruiker Toevoegen</a>
-
-                @else
-                    <p>Je bent niet van deze afdeling</p>
-                @endif
+                        <a href="{{route('sales.create')}}" class="btn btn-success">Gebruiker Toevoegen</a>
+                    @else
+                        <p>Je bent niet van deze afdeling</p>
+                    @endif
                 </div>
             </div>
         </div>

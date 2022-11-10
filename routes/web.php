@@ -11,6 +11,7 @@ use App\Http\Controllers\FinanceController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\QuotationController;
 use App\Models\Product;
+use App\Http\Controllers\AccountController;
 use App\Http\Livewire\Calendar;
 use App\Http\Controllers\FullCalenderController;
 /*
@@ -38,8 +39,11 @@ Route::resource('factuur', InvoiceController::class);
 
 Route::resource('quotation', QuotationController::class);
 
-Route::get('/privacyverklaring', function() {
-    return view('privacyverklaring');})->name('privacyverklaring');
+Route::resource('users/account', AccountController::class);
+
+Route::get('/maintenance', function () {
+    return view('dashboard/maintenance');})->name('maintenance');
+
 // Dashboard
 
 Route::get('/dashboard', function () {
@@ -59,9 +63,6 @@ Route::get('/maintenance', function () {
 //     return view('dashboard/sales');})->name('sales');
 
 Route::resource('dashboard/sales', ClientController::Class);
-
-
-
 
 Route::get('full-calender', [FullCalenderController::class, 'index']);
 

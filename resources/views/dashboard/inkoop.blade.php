@@ -22,12 +22,21 @@
                             </tr>
                             </thead>
                             <tbody>
+
+                            @if($stock_status_name_false == 0)
+                                <td>niet op voorraad</td>
+                            @elseif($stock_status_name_true == 1)
+                                <td>Wel op voorraad</td>
+
                                 @foreach( $products as $product )
                                 <tr>
                                     <td>{{$product->name}}</td>
                                     <td>{{$product->description}}</td>
                                     <td>{{$product->price}}</td>
-                                    <td>{{$product->stock_status}}</td>
+                                    @if($stock_status_name == 0)
+                                        <td>{{$product->stock_status = $stock_status_name_false}}</td>
+                                    @else
+
                                     <td>{{$product->stock}}</td>
                               </tr>
                                 @endforeach
