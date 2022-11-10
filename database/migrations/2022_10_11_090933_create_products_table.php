@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('description');
             $table->string('image_path')->nullable();
             $table->decimal('price');
+            $table->integer('stock_status');
+            $table->integer('stock');
             $table->timestamps();
             $table->foreignId('product_category_id')
                 ->references('id')

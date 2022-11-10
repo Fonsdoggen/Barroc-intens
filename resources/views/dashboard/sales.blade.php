@@ -17,7 +17,6 @@
                                 <th scope="col">ID</th>
                                 <th scope="col">Naam</th>
                                 <th scope="col">Email</th>
-                                <th scope="col">Wachtwoord</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -26,7 +25,6 @@
                                     <th scope="row">{{$client->id}}</th>
                                     <td>{{$client->name}}</td>
                                     <td>{{$client->email}}</td>
-                                    <td>{{$client->password}}</td>
                               </tr>
                                 @endforeach
                             </tbody>
