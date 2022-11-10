@@ -9,7 +9,8 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\QuotationController;
-
+use App\Http\Livewire\Calendar;
+use App\Http\Controllers\FullCalenderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -56,5 +57,14 @@ Route::get('/maintenance', function () {
 //     return view('dashboard/sales');})->name('sales');
 
 Route::resource('dashboard/sales', ClientController::Class);
+
+
+
+
+Route::get('full-calender', [FullCalenderController::class, 'index']);
+
+Route::post('full-calender/action', [FullCalenderController::class, 'action']);
+
+
 
 require __DIR__.'/auth.php';
