@@ -10,6 +10,7 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\FinanceController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\QuotationController;
+use App\Models\Product;
 use App\Http\Livewire\Calendar;
 use App\Http\Controllers\FullCalenderController;
 /*
@@ -48,11 +49,12 @@ Route::get('/dashboard', function () {
 Route::resource('dashboard/finance', FinanceController::Class);
 
 Route::get('/inkoop', function () {
-    return view('dashboard/inkoop');})->name('inkoop');
+    $products = Product::all();
+    return view('dashboard/inkoop', ['products' => $products]);})->name('inkoop');
+
 
 Route::get('/maintenance', function () {
     return view('dashboard/maintenance');})->name('maintenance');
-
 // Route::get('/sales', function () {
 //     return view('dashboard/sales');})->name('sales');
 
