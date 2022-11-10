@@ -30,6 +30,8 @@ class ProductFactory extends Factory
                 'description' => fake()->sentence(6),
                 'image_path' => $img_path,
                 'price' => fake()->randomFloat(2, 50, 999),
+                'stock_status'   =>  null,
+                'stock'   =>  null,
                 'product_category_id' => $category_id
             ])
         ];

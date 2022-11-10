@@ -21,6 +21,8 @@ class ProductSeeder extends Seeder
             'description' => 'S234FREKT',
             'image_path' => 'img/machine-bit-light.png',
             'price' => '289',
+            'stock_status' => '0',
+            'stock' => '0',
             'product_category_id' => '1'
         ]);
         DB::table('products')->insert([
@@ -28,6 +30,8 @@ class ProductSeeder extends Seeder
             'description' => 'S234KNDPF',
             'image_path' => 'img/machine-bit-light.png',
             'price' => '289',
+            'stock_status' => '1',
+            'stock' => '0',
             'product_category_id' => '1'
         ]);
         DB::table('products')->insert([
@@ -35,6 +39,8 @@ class ProductSeeder extends Seeder
             'description' => 'S234NNBMV',
             'image_path' => 'img/machine-bit-deluxe.png',
             'price' => '375',
+            'stock_status' => '1',
+            'stock' => '0',
             'product_category_id' => '2'
         ]);
         DB::table('products')->insert([
@@ -42,6 +48,8 @@ class ProductSeeder extends Seeder
             'description' => 'S234MMPLA',
             'image_path' => 'img/machine-bit-deluxe.png',
             'price' => '375',
+            'stock_status' => '1',
+            'stock' => '69',
             'product_category_id' => '2'
         ]);
 
@@ -50,6 +58,8 @@ class ProductSeeder extends Seeder
             'description' => 'Een toegankelijke en zachte koffie. Hij is afkomstig van de Finca El Limoncillo, een weelderige plantage aan de rand van het regenwoud in de Matagalpa regio in Nicaragua.',
             'image_path' => 'img/Coffee.jpg',
             'price' => '21.60',
+            'stock_status' => '1',
+            'stock' => '0',
             'product_category_id' => '3'
         ]);
         DB::table('products')->insert([
@@ -57,6 +67,8 @@ class ProductSeeder extends Seeder
             'description' => 'Koffie van de oorspronkelijke koffiestruik (de Bourbon) met gele koffiebessen. Deze zeldzame koffie heeft de afgelopen 20 jaar steeds meer erkenning gekregen en vele prijzen gewonnen.',
             'image_path' => 'img/Coffee.jpg',
             'price' => '23.20',
+            'stock_status' => '1',
+            'stock' => '0',
             'product_category_id' => '3'
         ]);
         DB::table('products')->insert([
@@ -64,6 +76,8 @@ class ProductSeeder extends Seeder
             'description' => 'Een Italiaanse espresso met een krachtig karakter en een aromatische afdronk.',
             'image_path' => 'img/Coffee.jpg',
             'price' => '20.80',
+            'stock_status' => '0',
+            'stock' => '0',
             'product_category_id' => '3'
         ]);
         DB::table('products')->insert([
@@ -71,6 +85,8 @@ class ProductSeeder extends Seeder
             'description' => 'De koffie is geproduceerd volgens de honey-methode. Hierbij wordt de koffieboon in haar vruchtvlees gedroogd, waardoor de zoete fruitsmaak diep in de boon trekt. Dit levert een éxtra zoete koffie op.',
             'image_path' => 'img/Coffee.jpg',
             'price' => '27.80',
+            'stock_status' => '1',
+            'stock' => '0',
             'product_category_id' => '3'
         ]);
 
