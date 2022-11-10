@@ -12,7 +12,7 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FDD716">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{asset('/')}}"><img src="{{asset('img/Logo6_klein.png')}}" alt="Logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,9 +30,11 @@
 
                     </li>
                     @auth
-                        <li class="nav-item">
-                            <a href="{{route('dashboard')}}" class="nav-link">Dashboard</a>
-                        </li>
+                        @if (Auth::user()->role_id !== 5)
+                            <li class="nav-item">
+                                <a href="{{route('dashboard')}}" class="nav-link">Dashboard</a>
+                            </li>
+                        @endif
                     @endauth
 
                     <ul class="navbar-nav ml-auto">
@@ -40,8 +42,8 @@
                         @guest
                             <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <li class="nav-item">
+                                <a id="navbarDropdown" href="#" class="nav-link" role="button"  aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
