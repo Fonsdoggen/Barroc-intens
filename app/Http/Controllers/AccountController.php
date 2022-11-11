@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use \App\Models\User;
+use App\Models\Account;
 
 class AccountController extends Controller
 {
@@ -14,9 +14,9 @@ class AccountController extends Controller
      */
     public function index()
     {
-        $user = User::all();
-        return view('users/account', [
-            'user' => $user
+        $account = Account::all();
+        return view('/account', [
+            'account' => $account
         ]);
     }
 
@@ -27,7 +27,7 @@ class AccountController extends Controller
      */
     public function create()
     {
-
+        //
     }
 
     /**
@@ -38,7 +38,7 @@ class AccountController extends Controller
      */
     public function store(Request $request)
     {
-
+        //
     }
 
     /**
@@ -49,7 +49,7 @@ class AccountController extends Controller
      */
     public function show($id)
     {
-
+        //
     }
 
     /**
@@ -60,7 +60,8 @@ class AccountController extends Controller
      */
     public function edit($id)
     {
-
+        $account = Account::findOrFail($id);
+        return view('accounts.edit', ['account' => $account]);
     }
 
     /**
@@ -72,7 +73,10 @@ class AccountController extends Controller
      */
     public function update(Request $request, $id)
     {
-
+        $account = Account::findOrFail($id);
+        $account->update($request->except(['_token', '_method']));
+        return redirect()
+            ->route('accounts.index');
     }
 
     /**
@@ -83,6 +87,6 @@ class AccountController extends Controller
      */
     public function destroy($id)
     {
-
+        //
     }
 }

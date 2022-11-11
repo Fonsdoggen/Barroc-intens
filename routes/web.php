@@ -39,7 +39,7 @@ Route::resource('factuur', InvoiceController::class);
 
 Route::resource('quotation', QuotationController::class);
 
-Route::resource('users/account', AccountController::class);
+Route::resource('accounts', AccountController::class);
 
 Route::get('/maintenance', function () {
     return view('dashboard/maintenance');})->name('maintenance');
