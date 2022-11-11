@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h5 style="padding-top: 20px; padding-bottom: 15px"> Welkom {{ Auth::user()->name }}</h5>
+    <h4 style="padding-top: 20px; padding-bottom: 15px"> Welkom {{ Auth::user()->name }}</h4>
     <table class="table table-striped">
         <thead>
         <tr>
@@ -17,5 +17,6 @@
                 <td><a href="{{route('accounts.edit', Auth::user()->id)}}" class="btn btn-warning">Gebruikersgegevens wijzigen</a></td>
             </tr>
         </tbody>
-    </table>
+   </table>
+    <p>Mail naar privacy@barroc.it als je je account wilt verwijderen.</p>
 @endsection
