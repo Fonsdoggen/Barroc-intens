@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
-use App\Http\Controllers\FactuurController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\CategoryController;
@@ -11,6 +10,7 @@ use App\Http\Controllers\FinanceController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\QuotationController;
 use App\Models\Product;
+use App\Models\MaintenanceItem;
 use App\Http\Controllers\AccountController;
 use App\Http\Livewire\Calendar;
 use App\Http\Controllers\FullCalenderController;
@@ -42,7 +42,8 @@ Route::resource('quotation', QuotationController::class);
 Route::resource('accounts', AccountController::class);
 
 Route::get('/maintenance', function () {
-    return view('dashboard/maintenance');})->name('maintenance');
+    $MaintenanceItem = MaintenanceItem::all();
+    return view('dashboard/maintenance', ['MaintenanceItem' => $MaintenanceItem]);})->name('maintenance');
 
 // Dashboard
 
@@ -56,9 +57,6 @@ Route::get('/inkoop', function () {
     $products = Product::all();
     return view('dashboard/inkoop', ['products' => $products]);})->name('inkoop');
 
-
-Route::get('/maintenance', function () {
-    return view('dashboard/maintenance');})->name('maintenance');
 // Route::get('/sales', function () {
 //     return view('dashboard/sales');})->name('sales');
 

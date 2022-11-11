@@ -12,11 +12,27 @@
 		<div class="mx-auto sm:px-6 lg:px-8">
 			<div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
 				@if (!Auth::guest() && Auth::user()->role_id == 3)
-
-                    
-
                 	<body>
 						<div class="container">
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Naam onderdeel</th>
+                                    <th scope="col">Prijs</th>
+                                    <th scope="col">Lengte (in mm)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach ($MaintenanceItem as $MaintenanceItems)
+                                <tr>
+                                    <td>{{$MaintenanceItems->name}}</td>
+                                    <td>€{{$MaintenanceItems->price}}</td>
+                                    <td>{{$MaintenanceItems->length}}</td>
+                                </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+
 								<br />
 								<h1 class="text-center text-primary">Maintenance Appointments</h1>
 								<br />
@@ -24,7 +40,7 @@
 								<div id="calendar"></div>
 
 							</div>
-							
+
 							<script>
 
 							$(document).ready(function () {
@@ -143,7 +159,7 @@
 								});
 
 							});
-						
+
 						</script>
                     </body>
 

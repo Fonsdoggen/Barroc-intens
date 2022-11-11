@@ -18,5 +18,5 @@
             </tr>
         </tbody>
    </table>
-    <p>Mail naar privacy@barroc.it als je je account wilt verwijderen.</p>
+    <p>Stuur een mail naar <b><a href="mailto:privacy@barroc.it">privacy@barroc.it</a></b> als u wilt dat uw account wordt verwijderd.</p>
 @endsection

@@ -80,34 +80,9 @@
 </main>
 </body>
 <!-- Footer -->
+<hr/>
 <footer class="text-center text-lg-start bg-light text-muted">
     <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-        <!-- Left -->
-
-        <!-- Right -->
-        <div>
-            <a href="" class="me-4 text-reset">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-                <i class="fab fa-google"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-                <i class="fab fa-github"></i>
-            </a>
-        </div>
-        <!-- Right -->
-    </section>
     <!-- Section: Social media -->
 
     <!-- Section: Links  -->
@@ -119,11 +94,9 @@
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                     <!-- Content -->
                     <h6 class="text-uppercase fw-bold mb-4">
-                        <i class="fas fa-gem me-3"></i>Barroc-intens
+                        <img src="{{asset('img/Logo4_klein.png')}}" alt="Logo" style="width: auto; height: 50px">
                     </h6>
-                    <p>
-                       professionele koffie en machines sinds 1999
-                    </p>
+                    <img src="{{asset('img/Logo3_klein.png')}}" alt="Logo" style="width: auto; height: 60px">
                 </div>
                 <!-- Grid column -->
 
@@ -158,7 +131,7 @@
                         <a href="#!" class="text-reset">Pricing</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Settings</a>
+                        <a href="{{route('accounts.index')}}" class="text-reset">Account settings</a>
                     </p>
                     <p>
                         <a href="#!" class="text-reset">Orders</a>
@@ -173,12 +146,9 @@
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                    <p><i class="fas fa-home me-3"></i>4826 AA Breda</p>
-                    <p>
-                        <i class="fas fa-envelope me-3"></i>
-                        info@barrocintens.nl
-                    </p>
-                    <p><i class="fas fa-phone me-3"></i>+31(0)76 - 5733444</p>
+                    <p class="fas fa-home me-3">4826 AA Breda</p>
+                    <p class="fas fa-envelope me-3">info@barrocintens.nl</p>
+                    <p class="fas fa-phone me-3">+31(0)76 - 5733444</p>
                 </div>
                 <!-- Grid column -->
             </div>

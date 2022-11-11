@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('content')
-    <h1>Product toevoegen</h1>
+    <h1>Account aanpassen</h1>
     <form method="post" action="{{route('accounts.update', $account)}}">
         @csrf
         @method('PUT')
@@ -15,6 +15,6 @@
             <input type="text" name="email" value="{{$account->email}}" class="form-control">
         </div>
 
-        <input type="submit" style="margin-top: 10px;" value="Product bewerken" class="btn btn-dark">
+        <input type="submit" style="margin-top: 10px;" value="Account bewerken" class="btn btn-dark">
     </form>
 @endsection
