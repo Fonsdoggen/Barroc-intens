@@ -52,7 +52,7 @@ class UserSeeder extends Seeder
            'name' => 'Fons',
            'email' => 'fonsdoggen@gmail.com',
            'password' => Hash::make('hallo123'),
-           'role_id' => '3'
+           'role_id' => '2'
        ]);
     }
 }

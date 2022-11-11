@@ -21,6 +21,7 @@ return new class extends Migration
             $table->decimal('price');
             $table->integer('stock_status')->nullable();
             $table->integer('stock')->nullable();
+            $table->boolean('InOrder');
             $table->timestamps();
             $table->foreignId('product_category_id')
                 ->references('id')

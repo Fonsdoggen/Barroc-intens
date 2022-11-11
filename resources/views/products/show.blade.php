@@ -17,11 +17,15 @@
         <a type="button" class="btn btn-warning" style="background-color: #FDD716; border: 0px;" href="{{url()->previous()}}"><- Terug</a>
         @if (!Auth::guest() && Auth::user()->role_id == 2)
             <a href="{{route('products.edit', $product)}}" class="btn btn-dark">Edit</a>
+            @if ($product->InOrder == false)
             <form method="POST" action="{{route('products.destroy', $product)}}">
                 @csrf
                 @method('delete')
                 <input class="btn btn-danger" type="submit" value="Delete">
             </form>
+            @else
+            <p>Kan niet verwijderen omdat hij besteld is</p>
+            @endif
         @endif
     </div>
 </div>

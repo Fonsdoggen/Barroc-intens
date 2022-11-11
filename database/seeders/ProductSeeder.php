@@ -23,6 +23,7 @@ class ProductSeeder extends Seeder
             'price' => '289',
             'stock_status' => '0',
             'stock' => '0',
+            'InOrder' => false,
             'product_category_id' => '1'
         ]);
         DB::table('products')->insert([
@@ -32,6 +33,7 @@ class ProductSeeder extends Seeder
             'price' => '289',
             'stock_status' => '1',
             'stock' => '0',
+            'InOrder' => false,
             'product_category_id' => '1'
         ]);
         DB::table('products')->insert([
@@ -41,6 +43,7 @@ class ProductSeeder extends Seeder
             'price' => '375',
             'stock_status' => '1',
             'stock' => '0',
+            'InOrder' => true,
             'product_category_id' => '2'
         ]);
         DB::table('products')->insert([
@@ -50,6 +53,7 @@ class ProductSeeder extends Seeder
             'price' => '375',
             'stock_status' => '1',
             'stock' => '69',
+            'InOrder' => false,
             'product_category_id' => '2'
         ]);
 
@@ -60,6 +64,7 @@ class ProductSeeder extends Seeder
             'price' => '21.60',
             'stock_status' => '1',
             'stock' => '0',
+            'InOrder' => false,
             'product_category_id' => '3'
         ]);
         DB::table('products')->insert([
@@ -69,6 +74,7 @@ class ProductSeeder extends Seeder
             'price' => '23.20',
             'stock_status' => '1',
             'stock' => '0',
+            'InOrder' => true,
             'product_category_id' => '3'
         ]);
         DB::table('products')->insert([
@@ -78,6 +84,7 @@ class ProductSeeder extends Seeder
             'price' => '20.80',
             'stock_status' => '0',
             'stock' => '0',
+            'InOrder' => false,
             'product_category_id' => '3'
         ]);
         DB::table('products')->insert([
@@ -87,6 +94,7 @@ class ProductSeeder extends Seeder
             'price' => '27.80',
             'stock_status' => '1',
             'stock' => '0',
+            'InOrder' => false,
             'product_category_id' => '3'
         ]);
 
