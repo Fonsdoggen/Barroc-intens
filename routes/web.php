@@ -52,6 +52,9 @@ Route::get('/dashboard', function () {
 
 Route::resource('dashboard/finance', FinanceController::Class);
 
+Route::get('/privacyverklaring', function() {
+    return view('privacyverklaring');})->name('privacyverklaring');
+
 Route::get('/inkoop', function () {
     $products = Product::all();
     $MaintenanceItem = MaintenanceItem::all();
