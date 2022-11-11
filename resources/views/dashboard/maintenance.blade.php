@@ -14,25 +14,6 @@
 				@if (!Auth::guest() && Auth::user()->role_id == 3)
                 	<body>
 						<div class="container">
-                            <table class="table table-striped">
-                                <thead>
-                                <tr>
-                                    <th scope="col">Naam onderdeel</th>
-                                    <th scope="col">Prijs</th>
-                                    <th scope="col">Lengte (in mm)</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                @foreach ($MaintenanceItem as $MaintenanceItems)
-                                <tr>
-                                    <td>{{$MaintenanceItems->name}}</td>
-                                    <td>€{{$MaintenanceItems->price}}</td>
-                                    <td>{{$MaintenanceItems->length}}</td>
-                                </tr>
-                                @endforeach
-                                </tbody>
-                            </table>
-
 								<br />
 								<h1 class="text-center text-primary">Maintenance Appointments</h1>
 								<br />

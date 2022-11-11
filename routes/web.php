@@ -42,8 +42,7 @@ Route::resource('quotation', QuotationController::class);
 Route::resource('accounts', AccountController::class);
 
 Route::get('/maintenance', function () {
-    $MaintenanceItem = MaintenanceItem::all();
-    return view('dashboard/maintenance', ['MaintenanceItem' => $MaintenanceItem]);})->name('maintenance');
+    return view('dashboard/maintenance');})->name('maintenance');
 
 // Dashboard
 
@@ -55,7 +54,8 @@ Route::resource('dashboard/finance', FinanceController::Class);
 
 Route::get('/inkoop', function () {
     $products = Product::all();
-    return view('dashboard/inkoop', ['products' => $products]);})->name('inkoop');
+    $MaintenanceItem = MaintenanceItem::all();
+    return view('dashboard/inkoop', ['products' => $products], ['MaintenanceItem' => $MaintenanceItem]);})->name('inkoop');
 
 // Route::get('/sales', function () {
 //     return view('dashboard/sales');})->name('sales');

@@ -11,6 +11,7 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                 @if (!Auth::guest() && Auth::user()->role_id == 2)
                     {{--<p>Schrijf hier je code</p>--}}
+                    <h1>Producten</h1>
                     <table class="table table-striped">
                         <thead>
                             <tr>
@@ -34,9 +35,28 @@
                                     <td>{{$product->stock}}</td>
                                     @endif
                                 </tr>
-                                @endforeach;
+                                @endforeach
                             </tbody>
                         </table>
+                        <h1>Onderdelen</h1>
+                        <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Naam onderdeel</th>
+                                    <th scope="col">Prijs</th>
+                                    <th scope="col">Lengte (in mm)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach ($MaintenanceItem as $MaintenanceItems)
+                                <tr>
+                                    <td>{{$MaintenanceItems->name}}</td>
+                                    <td>€{{$MaintenanceItems->price}}</td>
+                                    <td>{{$MaintenanceItems->length}}</td>
+                                </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
                 @else
                     <p>Je bent niet van deze afdeling</p>
                 @endif
