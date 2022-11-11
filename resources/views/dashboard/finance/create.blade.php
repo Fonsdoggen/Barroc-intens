@@ -30,7 +30,7 @@
 
                         <div class="form-group">
                             <label for="">Offerte:</label>
-                            <input type="number" name="custom_invoice_id" class="form-control">
+                            <input type="number" name="quotation_id" class="form-control">
                         </div>
 
                         <div class="form-group">

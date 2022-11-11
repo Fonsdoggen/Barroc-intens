@@ -15,14 +15,14 @@ return new class extends Migration
     {
         Schema::create('custom_invoice_products', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('product_id')
+            ->references('id')
+            ->on('products');
             $table->integer('amount');
             $table->decimal('price_per_product');
-            $table->foreignId('custom_invoice_id')
+            $table->foreignId('quotation_id')
                 ->references('id')
-                ->on('custom_invoices');
-            $table->foreignId('product_id')
-                ->references('id')
-                ->on('products');
+                ->on('quotation');
             $table->integer('billing_type');
             $table->timestamps();
         });
