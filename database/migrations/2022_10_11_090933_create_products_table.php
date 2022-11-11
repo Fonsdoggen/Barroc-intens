@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string('description');
             $table->string('image_path')->nullable();
             $table->decimal('price');
-            $table->integer('stock_status')->nullable();
-            $table->integer('stock')->nullable();
-            $table->boolean('InOrder');
+            $table->integer('stock_status')->default(0);
+            $table->integer('stock')->default(0);
+            $table->boolean('InOrder')->default(false);
             $table->timestamps();
             $table->foreignId('product_category_id')
                 ->references('id')
