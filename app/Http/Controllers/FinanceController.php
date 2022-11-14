@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use \App\Models\Finance;
+use App\Models\Finance;
+use App\Models\Quotation;
+use App\Models\Product;
 
 class FinanceController extends Controller
 {
@@ -14,10 +16,9 @@ class FinanceController extends Controller
      */
     public function index()
     {
+        $quotations = Quotation::all();
         $finance = Finance::all();
-        return view('dashboard/finance', [
-            'finance' => $finance
-        ]);
+        return view('dashboard/finance', ['finance' => $finance,], ['quotations' => $quotations]);
     }
 
     /**
@@ -27,7 +28,9 @@ class FinanceController extends Controller
      */
     public function create()
     {
-        return view('dashboard/finance/create');
+        $quotations = Quotation::all();
+        $products = Product::all();
+        return view('dashboard/finance/create', ['quotations' => $quotations], ['products' => $products]);
     }
 
     /**
@@ -51,6 +54,7 @@ class FinanceController extends Controller
      */
     public function show($id)
     {
+        
         $finance = Finance::findOrFail($id);
         return view('finance.show', [
             'finance' => $finance
@@ -65,8 +69,9 @@ class FinanceController extends Controller
      */
     public function edit($id)
     {
+        $product = Product::all();
         $finance = Finance::findOrFail($id);
-        return view('dashboard.finance.edit', ['finance' => $finance]);
+        return view('dashboard.finance.edit', ['finance' => $finance], ['product' => $product]);
     }
 
     /**

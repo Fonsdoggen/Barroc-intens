@@ -14,9 +14,17 @@
                         <form method="post" action="{{route('finance.update', $finance)}}">
                             @csrf
                             @method('PUT')
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <label for="">Producten:</label>
                                 <input type="number" name="product_id" class="form-control">
+                            </div> -->
+                            <div class="form-group">
+                                <label for="product_id" class="div-spacing">Producten:</label>
+                                <select name="product_id" >
+                                    @foreach($product as $products)
+                                        <option value="{{$products->id}}">{{$products->name}}</option>
+                                    @endforeach
+                                </select>
                             </div>
 
                             <div class="form-group">
@@ -28,10 +36,10 @@
                                 <label for="">Totaalbedrag:</label>
                                 <input type="number" name="amount" class="form-control">
                             </div>
-
+                            
                             <div class="form-group">
-                                <label for="">Factuur:</label>
-                                <input type="number" name="custom_invoice_id" class="form-control">
+                                <label for="">Offerte:</label>
+                                <input type="number" name="quotation_id" class="form-control">
                             </div>
 
                             <div class="form-group">
