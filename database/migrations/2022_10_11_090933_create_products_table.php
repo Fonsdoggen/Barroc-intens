@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('description');
             $table->string('image_path')->nullable();
             $table->decimal('price');
-            $table->integer('stock_status')->default(0);
+            $table->integer('stock_status')->default(1);
             $table->integer('stock')->default(0);
             $table->boolean('InOrder')->default(false);
             $table->timestamps();

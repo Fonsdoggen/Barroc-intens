@@ -20,6 +20,7 @@
                                 <th scope="col">Prijs</th>
                                 <th scope="col">Status</th>
                                 <th scope="col">Voorraad</th>
+                                <th scope="col">Bijbestellen</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -33,11 +34,13 @@
                                     @else
                                         <td>Dit product is wel op voorraad</td>
                                     <td>{{$product->stock}}</td>
+                                    <td><a href="{{route('products.edit', $product)}}" class="btn btn-dark">Bijbestellen</a></td>
                                     @endif
                                 </tr>
                                 @endforeach
                             </tbody>
                         </table>
+                        {{-- <a href="{{route('products.edit', $product)}}" class="btn btn-dark">Voorraad bijbestellen</a> --}}
                         <h1>Onderdelen</h1>
                         <table class="table table-striped">
                                 <thead>
@@ -45,6 +48,7 @@
                                     <th scope="col">Naam onderdeel</th>
                                     <th scope="col">Prijs</th>
                                     <th scope="col">Lengte (in mm)</th>
+
                                 </tr>
                                 </thead>
                                 <tbody>

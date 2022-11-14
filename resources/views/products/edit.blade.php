@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('content')
-    <h1>Product toevoegen</h1>
+    <h1>Product aanpassen</h1>
     <form method="post" action="{{route('products.update', $product)}}">
         @csrf
         @method('PUT')
@@ -19,6 +19,16 @@
             <label class="div-spacing" for="">Prijs:</label>
             <input type="number" name="price" value="{{$product->price}}" class="form-control">
         </div>
+
+        <div class="form-group">
+            <label class="div-spacing" for="">Op voorraad:</label>
+            <input type="number" name="stock" value="{{$product->stock}}" class="form-control">
+        </div>
+
+        <div>
+            <input type="checkbox" id="horns" name="horns">
+            <label for="horns">Bestelling hoger dan 5000?</label>
+          </div>
 
         <div class="form-group">
             <label for="product_category_id" class="div-spacing">Categorie:</label>
