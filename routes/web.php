@@ -9,6 +9,7 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\FinanceController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\QuotationController;
+use App\Http\Controllers\SearchController;
 use App\Models\Product;
 use App\Models\MaintenanceItem;
 use App\Http\Controllers\AccountController;
@@ -43,6 +44,8 @@ Route::resource('accounts', AccountController::class);
 
 Route::get('/maintenance', function () {
     return view('dashboard/maintenance');})->name('maintenance');
+
+Route::get('/home/filter', [SearchController::class, 'filterOpdracht'])->name('filter-opdracht');
 
 // Dashboard
 
