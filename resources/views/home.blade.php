@@ -20,6 +20,18 @@
         <div class="container">
             <h1 id="down" style="color: white; display: flex; justify-content: flex-start; padding-top: 20px">Producten</h1>
 
+            <form id="report-page-form-form" action="{{route('filter-opdracht')}}">
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect01">Categorie:</label>
+                    <select name="category" class="form-select" id="inputGroupSelect01">
+                        <option selected value="99">Kies...</option>
+                        <option value="1">In stock</option>
+                        <option value="0">Uit stock</option>
+                    </select>
+                    <button style="padding: 0px 25px; background-color:#FDD716; " type="submit" class="btn">Filter</button>
+                </div>
+            </form>
+
             <div class="form-outline">
                 <input type="text" class="form-control product-search-bar" id="myInput" onkeyup="myFunction()" placeholder="Zoek een apparaat.." title="Type in a name">
             </div>
@@ -31,6 +43,7 @@
             </ul>
         </div>
 
+        
         <script>
             function myFunction() {
                 const productSearch = document.getElementById('myUL');
