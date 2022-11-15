@@ -22,13 +22,17 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach( $finance as $finances )
+                        @foreach($finance as $finances)
                             <tr>
                                 <th scope="row">{{$finances->product_id}}</th>
                                 <td>&euro; {{$finances->price_per_product}}</td>
                                 <td>&euro; {{$finances->amount}}</td>
-                                <td>{{$finances->custom_invoice_id}}</td>
-                                <td>{{$finances->billing_type}}</td>
+                                <td>{{$finances->quotation_id}}</td>
+                                    @if ($finances->billing_type == 0)
+                                        <td>Maandelijks</td>
+                                    @else
+                                        <td>Jaarlijks</td>
+                                    @endif
                                 <td><a href="{{route('finance.edit', $finances)}}" class="btn btn-warning">Leasecontract wijzigen</a></td>
                                 <td><form method="POST" action="{{route('finance.destroy', $finances)}}">
                                     @csrf

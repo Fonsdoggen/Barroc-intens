@@ -13,9 +13,17 @@
                     <h3>Leasecontract aanmaken</h3>
                     <form method="post" action="{{route('finance.store')}}">
                         @csrf
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="">Producten:</label>
                             <input type="number" name="product_id" class="form-control">
+                        </div> -->
+                        <div class="form-group">
+                            <label for="product_id" class="div-spacing">Producten:</label>
+                            <select name="product_id" >
+                                @foreach($products as $product)
+                                    <option value="{{$product->id}}">{{$product->name}}</option>
+                                @endforeach
+                            </select>
                         </div>
 
                         <div class="form-group">
@@ -27,10 +35,18 @@
                             <label for="">Totaalbedrag:</label>
                             <input type="number" name="amount" class="form-control">
                         </div>
-
+<!-- 
                         <div class="form-group">
                             <label for="">Offerte:</label>
                             <input type="number" name="quotation_id" class="form-control">
+                        </div> -->
+                        <div class="form-group">
+                            <label for="quotation_id" class="div-spacing">Offerte:</label>
+                            <select name="quotation_id" >
+                                @foreach($quotations as $quotation)
+                                    <option value="{{$quotation->id}}">{{$quotation->name}}</option>
+                                @endforeach
+                            </select>
                         </div>
 
                         <div class="form-group">

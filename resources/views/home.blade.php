@@ -89,9 +89,9 @@
         </div>
 
         <div class="container div-spacing" style="padding-bottom: 30px;">
-            @auth
+        @if (!Auth::guest() && Auth::user()->role_id == 4)
             <a href="{{route('products.create')}}" class="btn btn-success">Product Toevoegen</a>
-            @endauth
+        @endif
         </div>
 
 @endsection
