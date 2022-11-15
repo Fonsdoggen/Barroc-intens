@@ -3,7 +3,6 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Facades\DB;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Product>
@@ -25,15 +24,12 @@ class ProductFactory extends Factory
             $img_path = 'img/machine-bit-deluxe.png';
         }
         return [
-            DB::table('products')->insert([
-                'name' => fake()->name(),
-                'description' => fake()->sentence(6),
-                'image_path' => $img_path,
-                'price' => fake()->randomFloat(2, 50, 999),
-                'stock_status'   =>  null,
-                'stock'   =>  null,
-                'product_category_id' => $category_id
-            ])
+            'name' => fake()->name(),
+            'description' => fake()->sentence(6),
+            'image_path' => $img_path,
+            'price' => fake()->randomFloat(2, 50, 999),
+            'product_category_id' => $category_id
         ];
+
     }
 }

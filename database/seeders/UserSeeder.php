@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -18,25 +19,25 @@ class UserSeeder extends Seeder
     {
         DB::table('users')->insert([
             'name' => 'Finance',
-            'email' => 'finance'.'@gmail.com',
+            'email' => 'finance@gmail.com',
             'password' => Hash::make('password'),
             'role_id' => '1'
         ]);
         DB::table('users')->insert([
             'name' => 'Inkoop',
-            'email' => 'inkoop'.'@gmail.com',
+            'email' => 'inkoop@gmail.com',
             'password' => Hash::make('password'),
             'role_id' => '2'
         ]);
         DB::table('users')->insert([
             'name' => 'Maintenance',
-            'email' => 'maintenance'.'@gmail.com',
+            'email' => 'maintenance@gmail.com',
             'password' => Hash::make('password'),
             'role_id' => '3'
         ]);
         DB::table('users')->insert([
             'name' => 'Sales',
-            'email' => 'sales'.'@gmail.com',
+            'email' => 'sales@gmail.com',
             'password' => Hash::make('password'),
             'role_id' => '4'
         ]);
@@ -54,5 +55,7 @@ class UserSeeder extends Seeder
            'password' => Hash::make('hallo123'),
            'role_id' => '2'
        ]);
+
+        User::factory(150)->create();
     }
 }

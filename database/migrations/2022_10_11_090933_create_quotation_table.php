@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('street');
             $table->string('postcode');
             $table->string('email');
-            $table->bigInteger('tel-nummer');
+            $table->string('tel-nummer');
             $table->dateTime('date');
             $table->dateTime('paid_at')->nullable();
             $table->foreignId('company_id')
